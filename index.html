@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WomenFitness — міні-курс жіночого здоров'я 30+</title>
+<meta name="description" content="8 коротких уроків, які повертають контроль над тілом. Методика погоджена з гінекологом. Сьогодні —75%, 390 грн.">
+<meta property="og:title" content="WomenFitness — міні-курс жіночого здоров'я 30+">
+<meta property="og:description" content="8 коротких уроків. 10 вправ + 3 дихальні практики. Сьогодні 390 грн замість 2390 грн.">
+<meta property="og:image" content="images/logo.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="images/logo.avif" type="image/avif" fetchpriority="high">
+<link rel="preload" as="image" href="images/logo.jpg" fetchpriority="high">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --font-display:'Jost',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --font-serif:'Cormorant Garamond',Georgia,serif;
+  --accent:#d94f6e;
+  --accent-light:#e87a8f;
+  --accent-deep:#b53b56;
+  --accent-soft:#f7d9e0;
+  --accent-bg:#fff0f2;
+  --dark:#2a1a20;
+  --dark2:#3d262e;
+  --cream:#f8ede5;
+  --cream-deep:#f1ddd0;
+  --off-white:#fdf8f5;
+  --gray:#8a7a7d;
+  --gray-text:#5e4d52;
+  --gray-border:#ebe0d9;
+  --white:#ffffff;
+  --shadow-card:0 6px 30px rgba(78,30,42,.08);
+  --shadow-soft:0 2px 14px rgba(78,30,42,.06);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-display);
+  background:#e5dbd3;
+  color:var(--dark);
+  font-weight:400;
+  line-height:1.55;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg,video{display:block;max-width:100%}
+button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit}
+a{color:inherit;text-decoration:none}
+
+/* phone wrap */
+.phone-wrap{
+  max-width:480px;margin:0 auto;background:var(--off-white);
+  position:relative;overflow:hidden;
+}
+@media(min-width:520px){
+  body{padding:24px 0}
+  .phone-wrap{
+    box-shadow:0 0 80px rgba(78,30,42,.18), 0 0 0 1px rgba(0,0,0,.04);
+    border-radius:28px;
+  }
+}
+
+/* sections */
+.section{position:relative;padding:64px 22px;overflow:hidden}
+.section.tight{padding:48px 22px}
+.section-dark{background:var(--dark);color:#f5e9e3}
+.section-dark .gray-text{color:#c9b3b9}
+.section-cream{background:var(--cream)}
+.section-deep{background:var(--cream-deep)}
+.section-soft{background:var(--accent-bg)}
+
+.label{
+  display:inline-block;
+  font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent-deep);
+  padding:6px 12px;border-radius:999px;
+  background:rgba(217,79,110,.1);
+  margin-bottom:18px;
+}
+.section-dark .label{background:rgba(255,255,255,.08);color:var(--accent-light)}
+
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.15}
+h1{font-size:clamp(1.7rem,7.2vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1}
+h2{font-size:clamp(1.4rem,5.8vw,2rem);font-weight:800;line-height:1.15}
+h3{font-size:1.15rem;font-weight:700}
+h4{font-size:1rem;font-weight:700}
+p{color:var(--gray-text);font-size:.95rem;line-height:1.65}
+.section-dark p{color:#c9b3b9}
+.lead{font-size:1.02rem;color:var(--gray-text)}
+.section-dark .lead{color:#d9c4ca}
+
+.highlight{
+  background:linear-gradient(180deg,transparent 62%,rgba(217,79,110,.32) 62%,rgba(217,79,110,.32) 92%,transparent 92%);
+  padding:0 4px;margin:0 -2px;
+}
+.serif{font-family:var(--font-serif);font-style:italic;font-weight:500;letter-spacing:-.01em}
+.accent{color:var(--accent)}
+.accent-deep{color:var(--accent-deep)}
+
+/* buttons */
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:18px 22px;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);
+  color:#fff;border-radius:16px;
+  font-weight:700;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;
+  box-shadow:0 14px 32px rgba(217,79,110,.4), inset 0 1px 0 rgba(255,255,255,.2);
+  position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+  text-align:center;line-height:1.2;
+}
+.btn-primary::before{
+  content:'';position:absolute;top:0;left:-100%;
+  width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-22deg);transition:left .8s ease;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(217,79,110,.5)}
+.btn-primary:hover::before{left:140%}
+.btn-primary .arrow{transition:transform .25s}
+.btn-primary:hover .arrow{transform:translateX(4px)}
+
+.btn-wrap{padding:0 4px;margin-top:24px}
+.btn-note{
+  font-size:.78rem;color:var(--gray);
+  text-align:center;margin-top:12px;
+  display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;
+}
+.section-dark .btn-note{color:#a89097}
+
+/* decorative svgs */
+.deco{position:absolute;pointer-events:none;z-index:0}
+.deco svg{width:100%;height:100%}
+.container{position:relative;z-index:1}
+
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes floatR{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(6deg)}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(217,79,110,.5)}50%{box-shadow:0 0 0 12px rgba(217,79,110,0)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 80% 0%,rgba(217,79,110,.12) 0,transparent 50%),
+    radial-gradient(circle at 0% 100%,rgba(247,217,224,.6) 0,transparent 55%),
+    var(--off-white);
+  padding:28px 22px 56px;
+}
+.hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.hero-logo{height:42px;width:auto}
+.wordmark{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:900;font-size:1.05rem;letter-spacing:-.02em;color:var(--dark);
+}
+.wordmark .mark{
+  width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  color:#fff;display:grid;place-items:center;
+  font-family:var(--font-serif);font-style:italic;font-weight:600;font-size:1.1rem;
+  box-shadow:0 4px 12px rgba(217,79,110,.32);
+}
+.wordmark .nm{line-height:1;display:flex;flex-direction:column;gap:2px}
+.wordmark .nm small{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);font-weight:500}
+.hero-illu{width:100%;height:100%;display:block}
+.footer .wordmark{color:#c9b3b9;margin-bottom:18px}
+.footer .wordmark .nm small{color:#7a6065}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent-deep);
+  padding:8px 12px;border-radius:999px;background:#fff;
+  box-shadow:var(--shadow-soft);
+  white-space:nowrap;line-height:1;flex-shrink:0;
+}
+.hero-top{gap:10px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 10px rgba(217,79,110,.7);
+  animation:pulseDot 1.8s ease-in-out infinite;
+}
+
+.hero-kicker{
+  font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:14px;
+}
+.hero h1{margin-bottom:18px}
+.hero h1 .em{font-family:var(--font-serif);font-style:italic;font-weight:600;color:var(--accent-deep);font-size:1.08em;letter-spacing:-.01em}
+.hero-sub{margin-bottom:22px;font-size:.98rem}
+
+.hero-bullets{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.hero-bullets li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--gray-text)}
+.hero-bullets .check{
+  flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:var(--accent-soft);color:var(--accent-deep);
+  display:grid;place-items:center;font-size:.7rem;font-weight:700;margin-top:1px;
+}
+
+.hero-photo{
+  position:relative;margin:6px 0 28px;
+  border-radius:24px;overflow:hidden;
+  aspect-ratio:4/3;
+  background:linear-gradient(135deg,var(--accent-soft),var(--cream));
+  box-shadow:var(--shadow-card);
+}
+.hero-photo-inner{
+  position:absolute;inset:0;
+  display:grid;place-items:center;
+}
+.hero-photo-logo{width:60%;max-width:240px;opacity:.95;
+  filter:drop-shadow(0 8px 20px rgba(217,79,110,.18));
+}
+.hero-photo::before{
+  content:'';position:absolute;top:14px;left:14px;right:14px;bottom:14px;
+  border:1px dashed rgba(217,79,110,.35);border-radius:18px;pointer-events:none;
+}
+.hero-photo .float-badge{
+  position:absolute;left:14px;bottom:14px;
+  background:#fff;border-radius:14px;padding:10px 14px;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:var(--shadow-card);font-size:.78rem;color:var(--gray-text);
+}
+.hero-photo .float-badge strong{color:var(--dark);font-weight:700}
+.hero-photo .float-badge .avatar{
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem;
+}
+.hero-photo .float-stamp{
+  position:absolute;right:12px;top:12px;
+  background:var(--dark);color:#fff;font-size:.65rem;letter-spacing:.14em;
+  padding:6px 10px;border-radius:999px;text-transform:uppercase;font-weight:600;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.hero-video-wrap{padding:0;background:#000}
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;background:#000;
+}
+.hero-video-wrap::before{display:none}
+.hero-video-wrap::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.35) 100%);
+}
+.hero-sound{
+  position:absolute;right:12px;bottom:12px;z-index:2;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);
+  display:grid;place-items:center;cursor:pointer;
+  transition:background .2s,transform .2s;
+}
+.hero-sound:hover{background:var(--accent);transform:scale(1.05)}
+.hero-video-wrap.unmuted .ic-mute{display:none}
+.hero-video-wrap.unmuted .ic-on{display:block!important}
+
+/* price block */
+.price-block{
+  background:#fff;border-radius:20px;padding:22px;
+  box-shadow:var(--shadow-card);
+  border:1px solid var(--gray-border);
+  margin-bottom:18px;
+}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.price-old{text-decoration:line-through;color:var(--gray);font-size:1.05rem}
+.price-new{font-size:2.2rem;font-weight:900;letter-spacing:-.03em;color:var(--dark);line-height:1}
+.price-new span{font-size:1rem;font-weight:600;color:var(--gray-text);margin-left:4px}
+.price-save{
+  display:inline-block;background:var(--accent);color:#fff;
+  padding:5px 10px;border-radius:8px;font-size:.72rem;font-weight:700;letter-spacing:.08em;
+}
+.price-hint{font-size:.8rem;color:var(--gray);margin-top:8px}
+
+/* timer */
+.timer-card{
+  background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 100%);
+  border-radius:20px;padding:18px 20px;margin-bottom:18px;
+  position:relative;overflow:hidden;color:#fff;
+}
+.timer-card::before{
+  content:'';position:absolute;top:-30%;right:-20%;width:200px;height:200px;
+  background:radial-gradient(circle,rgba(217,79,110,.35) 0%,transparent 60%);
+}
+.timer-card.large{padding:24px}
+.timer-label{
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#e7c7cf;margin-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;
+}
+.timer-units{display:flex;gap:10px;justify-content:center;align-items:center;position:relative}
+.timer-unit{
+  background:rgba(255,255,255,.08);border-radius:12px;
+  padding:10px 4px;min-width:62px;text-align:center;
+  border:1px solid rgba(255,255,255,.08);
+}
+.timer-card.large .timer-unit{min-width:72px;padding:12px 4px}
+.timer-num{font-size:1.8rem;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.04em;line-height:1}
+.timer-card.large .timer-num{font-size:2.1rem}
+.timer-name{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:#c9b3b9;margin-top:4px}
+.timer-sep{font-size:1.5rem;font-weight:900;color:rgba(255,255,255,.3);align-self:flex-start;margin-top:4px}
+
+/* bonus cards */
+.bonus-stack{display:grid;gap:16px;margin-top:8px}
+.bonus-card{
+  background:#fff;border-radius:20px;padding:22px;
+  box-shadow:var(--shadow-card);
+  border:1px solid var(--gray-border);
+  position:relative;overflow:hidden;
+}
+.bonus-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);
+}
+.bonus-card .bonus-head{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;cursor:pointer;
+}
+.bonus-card .bonus-head-text{flex:1}
+.bonus-card .bonus-toggle{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--accent-bg);color:var(--accent-deep);
+  display:grid;place-items:center;font-size:1.1rem;font-weight:700;
+  transition:transform .3s,background .25s,color .25s;margin-top:4px;
+}
+.bonus-card.open .bonus-toggle{transform:rotate(45deg);background:var(--accent);color:#fff}
+.bonus-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.bonus-card.open .bonus-body{max-height:600px}
+.bonus-body-inner{padding-top:14px}
+.bonus-tag{
+  display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-deep);background:var(--accent-bg);
+  padding:5px 10px;border-radius:6px;margin-bottom:12px;
+}
+.bonus-card h3{margin-bottom:10px;font-size:1.05rem}
+.bonus-card p{font-size:.88rem;margin-bottom:14px}
+.bonus-result{
+  display:flex;gap:8px;align-items:flex-start;font-size:.85rem;
+  padding:12px 14px;border-radius:12px;background:var(--accent-bg);
+  color:var(--dark);
+}
+.bonus-result strong{color:var(--accent-deep)}
+.bonus-result .ic{flex-shrink:0;margin-top:1px}
+
+/* znayomo - pain (horizontal carousel) */
+.pain-track{
+  display:flex;gap:14px;overflow-x:auto;
+  padding:8px 22px 18px;margin:0 -22px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.pain-track::-webkit-scrollbar{display:none}
+.pain-item{
+  background:#fff;border-radius:18px;padding:22px;
+  box-shadow:var(--shadow-soft);
+  border:1px solid var(--gray-border);
+  position:relative;
+  min-width:84%;max-width:84%;flex-shrink:0;
+  scroll-snap-align:center;
+  display:flex;flex-direction:column;
+}
+.pain-hint{
+  text-align:center;font-size:.78rem;color:var(--gray);
+  margin-top:4px;letter-spacing:.04em;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.pain-dots{
+  display:flex;justify-content:center;gap:6px;margin-top:14px;
+}
+.pain-dots span{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(217,79,110,.25);transition:all .25s;
+}
+.pain-dots span.act{width:18px;border-radius:3px;background:var(--accent)}
+.pain-emoji{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--accent-bg);display:grid;place-items:center;
+  font-size:1.5rem;margin-bottom:14px;
+  border:1px solid rgba(217,79,110,.15);
+}
+.pain-item h3{margin-bottom:8px;font-size:1.02rem;line-height:1.25}
+.pain-item p{font-size:.88rem;color:var(--gray-text)}
+.pain-conclude{
+  margin-top:28px;text-align:center;
+  padding:24px 18px;border-radius:18px;
+  background:linear-gradient(135deg,var(--accent-soft),#fff);
+  border:1px dashed rgba(217,79,110,.3);
+}
+.pain-conclude p{color:var(--gray-text);font-size:.95rem}
+.pain-conclude strong{color:var(--accent-deep);font-weight:700}
+
+/* methodology cards */
+.method-grid{display:grid;gap:16px;margin-top:8px}
+.method-card{
+  background:rgba(255,255,255,.04);border-radius:20px;padding:24px 22px;
+  border:1px solid rgba(255,255,255,.08);
+  position:relative;overflow:hidden;
+}
+.method-num{
+  font-family:var(--font-serif);font-style:italic;
+  font-size:2.6rem;font-weight:600;color:var(--accent-light);
+  line-height:1;margin-bottom:8px;letter-spacing:-.04em;
+  text-shadow:0 0 30px rgba(217,79,110,.4);
+}
+.method-card h3{color:#fff;margin-bottom:10px;font-size:1.05rem;line-height:1.3}
+.method-card p{color:#c9b3b9;font-size:.88rem}
+.method-icon{
+  position:absolute;top:20px;right:20px;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(217,79,110,.15);
+  display:grid;place-items:center;font-size:1rem;
+}
+
+.base-block{
+  margin-top:24px;background:rgba(217,79,110,.1);
+  border-radius:18px;padding:24px 20px;
+  border:1px solid rgba(217,79,110,.2);
+}
+.base-block h4{color:#fff;margin-bottom:14px;font-size:1.05rem}
+.base-list{list-style:none;display:grid;gap:12px}
+.base-list li{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#d9c4ca;line-height:1.55}
+.base-list .ck{
+  flex-shrink:0;width:20px;height:20px;border-radius:50%;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
+  font-size:.6rem;font-weight:700;margin-top:2px;
+}
+.base-list strong{color:#fff;font-weight:700}
+
+.method-final{
+  margin-top:24px;text-align:center;font-size:1.05rem;font-weight:600;
+  color:#fff;line-height:1.4;padding:0 4px;
+}
+.method-final strong{color:var(--accent-light)}
+
+/* program accordion */
+.lessons{display:grid;gap:12px;margin-top:8px}
+.lesson{
+  background:#fff;border-radius:18px;
+  border:1px solid var(--gray-border);
+  box-shadow:var(--shadow-soft);
+  overflow:hidden;transition:box-shadow .25s;
+}
+.lesson.open{box-shadow:var(--shadow-card);border-color:var(--accent-soft)}
+.lesson-head{
+  width:100%;display:flex;align-items:center;gap:14px;
+  padding:18px 20px;text-align:left;
+  transition:background .25s;
+}
+.lesson:hover .lesson-head{background:var(--off-white)}
+.lesson-num{
+  flex-shrink:0;width:42px;height:42px;border-radius:12px;
+  background:var(--accent-bg);color:var(--accent-deep);
+  display:grid;place-items:center;
+  font-family:var(--font-serif);font-style:italic;
+  font-size:1.2rem;font-weight:600;
+}
+.lesson.open .lesson-num{background:var(--accent);color:#fff}
+.lesson-title{flex:1;font-weight:700;font-size:.92rem;line-height:1.35;color:var(--dark)}
+.lesson-title .ln-tag{
+  display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-deep);font-weight:600;margin-bottom:4px;
+}
+.lesson-toggle{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--cream);color:var(--dark);
+  display:grid;place-items:center;font-size:1.1rem;
+  transition:transform .3s,background .25s;
+}
+.lesson.open .lesson-toggle{transform:rotate(45deg);background:var(--accent);color:#fff}
+.lesson-body{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+}
+.lesson.open .lesson-body{max-height:1000px}
+.lesson-body-inner{padding:0 20px 20px;border-top:1px solid var(--gray-border);margin-top:0;padding-top:18px}
+.lesson-video{
+  position:relative;width:100%;aspect-ratio:16/9;
+  border-radius:18px 18px 0 0;overflow:hidden;background:#000;
+  margin:0;border-bottom:1px solid var(--gray-border);
+}
+.lesson-video video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.lesson-video::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%);
+}
+.lesson-video .lv-tag{
+  position:absolute;left:10px;top:10px;z-index:2;
+  background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:#fff;
+  font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 9px;border-radius:999px;font-weight:600;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.lesson-video .lv-tag::before{
+  content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 8px rgba(217,79,110,.7);
+  animation:pulseDot 1.8s ease-in-out infinite;
+}
+.lesson{display:flex;flex-direction:column}
+.lesson-list{list-style:none;display:grid;gap:8px;margin-bottom:16px}
+.lesson-list li{display:flex;gap:8px;align-items:flex-start;font-size:.86rem;color:var(--gray-text);line-height:1.5}
+.lesson-list .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0}
+.lesson-result{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:12px 14px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent-bg),#fff);
+  border:1px solid var(--accent-soft);
+  font-size:.86rem;color:var(--dark);
+}
+.lesson-result strong{color:var(--accent-deep)}
+
+.program-meta{
+  display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;
+}
+.program-meta span{
+  font-size:.72rem;background:#fff;padding:7px 12px;border-radius:999px;
+  border:1px solid var(--gray-border);color:var(--gray-text);font-weight:500;
+}
+.program-meta span strong{color:var(--dark);font-weight:700}
+
+/* before/after */
+.ba-stack{display:grid;gap:14px;margin-top:8px}
+.ba-pair{
+  background:#fff;border-radius:18px;overflow:hidden;
+  border:1px solid var(--gray-border);box-shadow:var(--shadow-soft);
+}
+.ba-side{padding:18px 20px}
+.ba-before{background:#f4ece8;border-bottom:1px solid var(--gray-border)}
+.ba-after{background:#fff;position:relative}
+.ba-after::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);
+}
+.ba-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.ba-before .ba-tag{color:#9a7e85}
+.ba-after .ba-tag{color:var(--accent-deep)}
+.ba-side p{font-size:.9rem;line-height:1.5}
+.ba-before p{color:#7a6469}
+.ba-after p{color:var(--dark)}
+
+.trust-strip{
+  margin-top:24px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;
+  padding:16px;background:#fff;border-radius:14px;border:1px solid var(--gray-border);
+}
+.trust-strip span{font-size:.75rem;color:var(--gray-text);display:inline-flex;align-items:center;gap:6px}
+.trust-strip .sep{color:var(--gray-border)}
+
+/* how-it-works cards */
+.how-grid{display:grid;gap:14px;margin-top:8px}
+.how-card{
+  background:#fff;border-radius:18px;padding:22px;
+  border:1px solid var(--gray-border);box-shadow:var(--shadow-soft);
+}
+.how-icon{
+  width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent-soft),var(--accent-bg));
+  display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px;
+  border:1px solid rgba(217,79,110,.15);
+}
+.how-card h3{margin-bottom:8px;font-size:1.02rem;color:var(--dark)}
+.how-card p{font-size:.88rem;color:var(--gray-text)}
+.how-card p strong{color:var(--dark);font-weight:700}
+
+.homework-block{
+  margin-top:20px;background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  border-radius:20px;padding:24px;color:#fff;position:relative;overflow:hidden;
+}
+.homework-block::before{
+  content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;
+  background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 60%);
+}
+.homework-tag{
+  display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(255,255,255,.18);padding:5px 10px;border-radius:6px;margin-bottom:12px;position:relative;
+}
+.homework-block h3{color:#fff;margin-bottom:10px;font-size:1.1rem;position:relative}
+.homework-block p{color:rgba(255,255,255,.92);font-size:.9rem;position:relative}
+.homework-block blockquote{
+  margin-top:14px;padding:14px 16px;background:rgba(0,0,0,.18);
+  border-radius:12px;font-family:var(--font-serif);font-style:italic;
+  font-size:.95rem;color:#fff;position:relative;
+}
+
+.summary-block{
+  margin-top:24px;padding:24px 22px;background:rgba(255,255,255,.04);
+  border-radius:20px;border:1px solid rgba(255,255,255,.08);
+}
+.summary-block h4{color:#fff;margin-bottom:16px;font-size:1.05rem}
+.summary-list{list-style:none;display:grid;gap:12px}
+.summary-list li{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:#d9c4ca;line-height:1.5}
+.summary-list strong{color:#fff}
+.summary-list .ck{
+  flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
+  font-size:.65rem;font-weight:700;margin-top:1px;
+}
+
+/* author */
+.author-photo{
+  position:relative;width:180px;height:180px;margin:0 auto 24px;
+}
+.author-photo-inner{
+  width:100%;height:100%;border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,var(--accent-soft),var(--cream));
+  display:grid;place-items:center;
+  border:4px solid #fff;box-shadow:0 14px 40px rgba(78,30,42,.25);
+  position:relative;
+}
+.author-photo-inner span{
+  font-family:var(--font-serif);font-style:italic;font-weight:600;
+  font-size:3.2rem;color:var(--accent-deep);
+}
+.author-photo-inner picture,.author-photo-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.author-photo::before{
+  content:'';position:absolute;inset:-12px;border-radius:50%;
+  border:1px dashed rgba(217,79,110,.4);animation:floatR 14s ease-in-out infinite;
+}
+.author-photo .stamp{
+  position:absolute;right:-6px;bottom:6px;
+  background:var(--accent);color:#fff;
+  padding:8px 12px;border-radius:999px;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  box-shadow:0 8px 18px rgba(217,79,110,.4);
+}
+
+.author-name{text-align:center;font-size:1.8rem;font-weight:900;letter-spacing:-.02em;margin-bottom:8px;color:#fff}
+.author-role{
+  text-align:center;font-size:.78rem;letter-spacing:.04em;
+  color:#c9b3b9;margin-bottom:24px;line-height:1.55;padding:0 12px;
+}
+.author-role .dot{color:var(--accent-light);margin:0 6px}
+
+.regalia{display:grid;gap:12px;margin-bottom:24px}
+.regalia li{
+  display:flex;gap:12px;align-items:flex-start;
+  background:rgba(255,255,255,.04);border-radius:14px;padding:14px 16px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.regalia .ck{
+  flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
+  font-size:.65rem;font-weight:700;margin-top:1px;
+}
+.regalia span{font-size:.86rem;color:#d9c4ca;line-height:1.5}
+.regalia strong{color:#fff;font-weight:700}
+
+.author-quote{
+  background:linear-gradient(135deg,rgba(217,79,110,.18),rgba(217,79,110,.05));
+  border-radius:20px;padding:28px 24px;position:relative;
+  border:1px solid rgba(217,79,110,.25);
+}
+.author-quote::before{
+  content:'\201C';position:absolute;top:-14px;left:18px;
+  font-family:var(--font-serif);font-size:5rem;color:var(--accent-light);line-height:1;
+}
+.author-quote p{
+  font-family:var(--font-serif);font-style:italic;font-weight:500;
+  font-size:1.05rem;color:#f5e9e3;line-height:1.55;margin-bottom:10px;
+}
+.author-quote .sign{
+  font-size:.85rem;font-weight:700;color:var(--accent-light);
+  text-align:right;font-family:var(--font-display);font-style:normal;letter-spacing:.04em;
+}
+
+/* reviews */
+.reviews-track{
+  display:flex;gap:14px;overflow-x:auto;padding:8px 22px 22px;
+  margin:0 -22px;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.reviews-track::-webkit-scrollbar{display:none}
+.review-card{
+  min-width:240px;max-width:260px;flex-shrink:0;scroll-snap-align:start;
+  aspect-ratio:9/16;border-radius:18px;overflow:hidden;
+  background:#000;position:relative;cursor:pointer;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+  content-visibility:auto;contain-intrinsic-size:240px 427px;
+}
+.review-card video{width:100%;height:100%;object-fit:cover;background:#000}
+.review-card .play-btn{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(255,255,255,.95);color:var(--accent-deep);
+  display:grid;place-items:center;font-size:1.2rem;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+  transition:transform .25s,background .25s;pointer-events:none;
+  animation:pulseGlow 2.4s ease-in-out infinite;
+}
+.review-card:hover .play-btn{transform:translate(-50%,-50%) scale(1.08)}
+.review-card.playing .play-btn{opacity:0}
+.review-card .badge{
+  position:absolute;left:12px;top:12px;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(8px);color:#fff;
+  font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:6px 10px;border-radius:999px;font-weight:600;
+}
+.reviews-hint{
+  text-align:center;font-size:.78rem;color:#9b8389;margin-top:8px;letter-spacing:.04em;
+}
+
+/* guarantee */
+.guarantee-icon{
+  width:80px;height:80px;margin:0 auto 20px;
+  border-radius:24px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 14px 30px rgba(217,79,110,.35);position:relative;
+}
+.guarantee-icon::before{
+  content:'';position:absolute;inset:-8px;border-radius:28px;
+  border:1px dashed rgba(217,79,110,.4);
+}
+.guarantee-stack{display:grid;gap:14px;margin-top:8px}
+.guarantee-card{
+  background:#fff;border-radius:20px;padding:22px;
+  border:1px solid var(--gray-border);box-shadow:var(--shadow-soft);
+  display:flex;gap:14px;align-items:flex-start;
+}
+.guarantee-card .ic{
+  flex-shrink:0;width:44px;height:44px;border-radius:12px;
+  background:var(--accent-bg);color:var(--accent-deep);
+  display:grid;place-items:center;font-size:1.3rem;
+}
+.guarantee-card h3{margin-bottom:6px;font-size:1rem}
+.guarantee-card p{font-size:.88rem;color:var(--gray-text)}
+.guarantee-final{
+  margin-top:24px;text-align:center;padding:20px;
+  background:var(--dark);color:#fff;border-radius:18px;
+  font-weight:700;font-size:1.05rem;line-height:1.35;
+}
+
+/* fork */
+.fork-stack{display:grid;gap:14px;margin-top:8px}
+.fork-pair{
+  background:#fff;border-radius:18px;overflow:hidden;
+  border:1px solid var(--gray-border);box-shadow:var(--shadow-soft);
+}
+.fork-side{padding:18px 20px}
+.fork-bad{background:#f2e8e5;border-bottom:1px solid var(--gray-border)}
+.fork-good{background:#fff;position:relative}
+.fork-good::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-deep));
+}
+.fork-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.fork-bad .fork-tag{color:#9a7e85}
+.fork-good .fork-tag{color:var(--accent-deep)}
+.fork-side p{font-size:.88rem;line-height:1.5}
+.fork-bad p{color:#7a6469}
+.fork-good p{color:var(--dark)}
+
+.author-msg{
+  margin-top:24px;padding:22px;border-radius:18px;
+  background:linear-gradient(135deg,var(--accent-soft),#fff);
+  border:1px dashed rgba(217,79,110,.3);
+}
+.author-msg p{
+  font-family:var(--font-serif);font-style:italic;font-weight:500;
+  font-size:1.05rem;color:var(--dark);line-height:1.5;margin-bottom:10px;
+}
+.author-msg p strong{color:var(--accent-deep)}
+.author-msg .sign{font-size:.85rem;font-weight:700;color:var(--accent-deep);font-family:var(--font-display);font-style:normal;text-align:right}
+
+/* package list */
+.package-list{display:grid;gap:10px;margin-top:8px}
+.package-item{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;border-radius:14px;padding:16px 18px;
+  border:1px solid var(--gray-border);
+}
+.package-item .ic{
+  flex-shrink:0;width:36px;height:36px;border-radius:10px;
+  background:var(--accent-bg);color:var(--accent-deep);
+  display:grid;place-items:center;font-size:1rem;
+}
+.package-item-text{flex:1;font-size:.88rem;line-height:1.4}
+.package-item strong{color:var(--dark);font-weight:700;display:block;margin-bottom:2px}
+.package-item .val{color:var(--gray);font-size:.78rem;font-style:italic}
+.package-item.no-price .val{color:var(--accent-deep);font-style:normal;font-weight:600}
+
+.price-summary{
+  margin-top:20px;background:var(--dark);color:#fff;
+  border-radius:20px;padding:24px 22px;position:relative;overflow:hidden;
+}
+.price-summary::before{
+  content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(217,79,110,.25) 0%,transparent 60%);
+}
+.price-row-sum{display:flex;justify-content:space-between;align-items:center;padding:8px 0;position:relative;font-size:.92rem;color:#c9b3b9}
+.price-row-sum strong{color:#fff;font-weight:700}
+.price-row-sum.divider{border-top:1px solid rgba(255,255,255,.12);padding-top:14px;margin-top:6px}
+.price-row-sum.final{padding-top:14px;font-size:1.1rem;color:#fff}
+.price-row-sum.final strong{font-size:1.6rem;color:var(--accent-light);font-weight:900;letter-spacing:-.02em}
+.price-row-sum .strike{text-decoration:line-through;color:#9b8389}
+.price-row-sum.save{color:var(--accent-light);font-weight:700}
+
+/* faq */
+.faq-list{display:grid;gap:10px;margin-top:8px}
+.faq-item{
+  background:#fff;border-radius:14px;
+  border:1px solid var(--gray-border);overflow:hidden;
+  transition:box-shadow .25s;
+}
+.faq-item.open{box-shadow:var(--shadow-card);border-color:var(--accent-soft)}
+.faq-head{
+  width:100%;display:flex;align-items:center;gap:14px;
+  padding:16px 18px;text-align:left;font-weight:600;font-size:.92rem;color:var(--dark);
+}
+.faq-icon{
+  flex-shrink:0;width:26px;height:26px;border-radius:50%;
+  background:var(--cream);color:var(--dark);
+  display:grid;place-items:center;font-size:1rem;
+  transition:transform .3s,background .25s;
+  margin-left:auto;
+}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--accent);color:#fff}
+.faq-q{flex:1}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-body{max-height:400px}
+.faq-body-inner{padding:0 18px 18px;font-size:.88rem;color:var(--gray-text);line-height:1.6}
+
+/* footer */
+.footer{
+  background:#1a0e12;color:#9b8389;
+  padding:36px 22px 100px;
+  font-size:.78rem;line-height:1.6;
+}
+.footer-logo{width:90px;margin-bottom:18px;opacity:.7;filter:brightness(1.3)}
+.footer h4{color:#c9b3b9;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
+.footer p{font-size:.78rem;color:#7a6065;margin-bottom:12px;line-height:1.55}
+.footer a{color:#c9b3b9;border-bottom:1px solid rgba(255,255,255,.1);transition:color .2s}
+.footer a:hover{color:var(--accent-light)}
+.footer .legal{font-size:.7rem;color:#5a4a4f;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* sticky bar */
+.sticky-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(16px);
+  border-top:1px solid var(--gray-border);
+  padding:10px 14px;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:0 -8px 22px rgba(78,30,42,.1);
+  transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.sticky-bar.visible{transform:translateY(0)}
+@media(min-width:520px){
+  .sticky-bar{
+    max-width:480px;left:50%;transform:translate(-50%,120%);
+    bottom:24px;border-radius:18px;border:1px solid var(--gray-border);
+  }
+  .sticky-bar.visible{transform:translate(-50%,0)}
+}
+.sticky-bar .sb-price{display:flex;flex-direction:column;line-height:1.1}
+.sticky-bar .sb-old{font-size:.7rem;color:var(--gray);text-decoration:line-through}
+.sticky-bar .sb-new{font-size:1.1rem;font-weight:900;color:var(--dark)}
+.sticky-bar .sb-timer{
+  font-size:.78rem;font-weight:700;color:var(--accent-deep);
+  font-variant-numeric:tabular-nums;
+  background:var(--accent-bg);padding:6px 10px;border-radius:8px;
+  display:flex;align-items:center;gap:6px;
+}
+.sticky-bar .sb-cta{
+  margin-left:auto;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));
+  color:#fff;padding:12px 18px;border-radius:12px;
+  font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;
+  box-shadow:0 6px 18px rgba(217,79,110,.35);
+  white-space:nowrap;
+}
+
+/* reveal — only hide if JS marks the doc as ready */
+.js-ready .reveal{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
+.js-ready .reveal.vis{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){
+  .js-ready .reveal{opacity:1;transform:none;transition:none}
+}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}.reveal-d4{transition-delay:.32s}
+.reveal-d5{transition-delay:.4s}
+
+/* section divider */
+.div-wave{display:block;width:100%;margin:0;line-height:0}
+</style>
+</head>
+<body>
+
+<div class="phone-wrap">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="deco" style="left:-30px;top:80px;width:120px;height:120px;opacity:.5">
+    <svg viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="50" stroke="#d94f6e" stroke-width="1" stroke-dasharray="3 4" opacity=".4"/>
+      <circle cx="60" cy="60" r="32" stroke="#d94f6e" stroke-width="1" opacity=".25"/>
+    </svg>
+  </div>
+  <div class="deco" style="right:-20px;bottom:120px;width:80px;height:80px;opacity:.6;animation:floatY 9s ease-in-out infinite">
+    <svg viewBox="0 0 80 80" fill="none">
+      <path d="M40 6 C 50 22, 58 28, 74 38 C 58 48, 50 54, 40 74 C 30 54, 22 48, 6 38 C 22 28, 30 22, 40 6 Z" fill="#d94f6e" opacity=".18"/>
+    </svg>
+  </div>
+
+  <div class="hero-top">
+    <div class="wordmark">
+      <div class="mark">W</div>
+      <div class="nm"><span>WomenFitness</span><small>міні-курс</small></div>
+    </div>
+    <div class="hero-badge"><span class="live-dot"></span>Старт <span data-start-date>завтра</span></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-kicker">WomenFitness · Міні-курс для жінок 30+</div>
+    <h1>
+      Скажи <span class="em">«прощавай»</span> підтіканням, слабкості тазового дна та скутості&nbsp;в тілі
+    </h1>
+    <p class="hero-sub lead">
+      Покажу, як простими вправами вдома повернути контроль над тілом. <span class="highlight">Методика погоджена з гінекологом</span>, безпечна для будь-якого віку і не має протипоказань.
+    </p>
+
+    <ul class="hero-bullets">
+      <li><span class="check">✓</span><span>Без тренажерів і складних вправ</span></li>
+      <li><span class="check">✓</span><span>Усього за 8 коротких уроків</span></li>
+      <li><span class="check">✓</span><span>10 вправ + 3 дихальні практики</span></li>
+    </ul>
+
+    <div class="hero-photo hero-video-wrap">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="">
+        <source src="videos/lessons/6.mp4#t=0.5" type="video/mp4">
+      </video>
+      <div class="float-stamp"><span class="live-dot" style="background:#fff;box-shadow:0 0 10px rgba(255,255,255,.8)"></span>З курсу</div>
+      <div class="float-badge">
+        <div class="avatar">917</div>
+        <div>жінок вже<br><strong>повернули контроль</strong></div>
+      </div>
+    </div>
+
+    <div class="price-block">
+      <div class="price-row">
+        <span class="price-old">2390 грн</span>
+        <span class="price-save">–75%</span>
+      </div>
+      <div class="price-new">390 грн<span>сьогодні</span></div>
+    </div>
+
+    <div class="timer-card">
+      <div class="timer-label"><span class="live-dot"></span>Спецціна закінчиться через</div>
+      <div class="timer-units" data-timer>
+        <div class="timer-unit"><div class="timer-num" data-h>00</div><div class="timer-name">годин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-m>10</div><div class="timer-name">хвилин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-s>00</div><div class="timer-name">секунд</div></div>
+      </div>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+      <div class="btn-note">🔒 Після оплати — миттєвий доступ у Telegram-боті</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BONUSES ============ -->
+<section class="section section-cream">
+  <div class="deco" style="right:-30px;top:60px;width:100px;height:100px;opacity:.4;animation:floatR 16s ease-in-out infinite">
+    <svg viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="40" stroke="#d94f6e" stroke-width="1" stroke-dasharray="2 5"/>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="label reveal">🎁 Бонуси до акції</div>
+    <h2 class="reveal">Купи курс до кінця таймеру — і отримай <span class="highlight">3 бонуси</span></h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Ці бонуси доповнюють курс і працюють тільки до кінця акції.</p>
+
+    <div class="timer-card large" style="margin-top:24px">
+      <div class="timer-label"><span class="live-dot"></span>Бонуси спливуть через</div>
+      <div class="timer-units" data-timer>
+        <div class="timer-unit"><div class="timer-num" data-h>00</div><div class="timer-name">годин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-m>10</div><div class="timer-name">хвилин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-s>00</div><div class="timer-name">секунд</div></div>
+      </div>
+    </div>
+
+    <div class="bonus-stack" style="margin-top:28px">
+      <div class="bonus-card reveal">
+        <div class="bonus-tag">🎁 Бонус №1</div>
+        <h3>Урок з гінекологом</h3>
+        <p>Медичний розбір усієї програми курсу від практикуючого гінеколога. Пояснення прихованих жіночих проблем 30+, про які більшість дізнається лише в кабінеті лікаря — коли вже пізно.</p>
+        <div class="bonus-result">
+          <span class="ic">🎯</span>
+          <span><strong>Результат:</strong> ти розумієш, що відбувається з твоїм тілом — і чому саме ці вправи його повертають.</span>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal reveal-d1">
+        <div class="bonus-tag">🎁 Бонус №2</div>
+        <h3>Чек-лист «Обов'язкові аналізи для жінки 30+»</h3>
+        <p>Складений практикуючим гінекологом. Без зайвих витрат на аналізи, які тобі не потрібні — лише той мінімум, який має здавати кожна жінка після 30, щоб контролювати своє здоров'я.</p>
+        <div class="bonus-result">
+          <span class="ic">🎯</span>
+          <span><strong>Результат:</strong> йдеш до лікаря підготовленою — і знаєш, що саме здати, щоб не пропустити важливе.</span>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal reveal-d2">
+        <div class="bonus-tag">🎁 Бонус №3</div>
+        <h3>Закрита Telegram-спільнота «Про що говорять жінки»</h3>
+        <p>Живе жіноче ком'юніті, де можна говорити про те, про що зазвичай мовчать. Підтримка, обмін досвідом, анонімні опитування. Простір без сорому і без осуду — лише жінки, які проходять той самий шлях.</p>
+        <div class="bonus-result">
+          <span class="ic">🎯</span>
+          <span><strong>Результат:</strong> ти не сама. Поруч — сотні жінок, які розуміють тебе без слів.</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:24px;text-align:center;font-style:italic">
+      Усі 3 бонуси доступні <strong style="color:var(--accent-deep)">тільки до завершення таймеру</strong> — далі курс продається без них.
+    </p>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Забрати курс з бонусами <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZNAYOMO ============ -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="label reveal">🪞 Якщо це про тебе</div>
+    <h2 class="reveal">Знайомо?</h2>
+
+    <div class="pain-track" id="painTrack" style="margin-top:28px">
+      <div class="pain-item reveal">
+        <div class="pain-emoji">👶</div>
+        <h3>Народжувала — і тіло «не повернулось»</h3>
+        <p>Минув рік, два, п'ять після пологів — а ти досі відчуваєш підтікання при сміху, чханні, бігу. Носиш щоденки «про всяк випадок», уникаєш батутів і активних ігор з дітьми. Гінеколог казав «з часом саме відновиться» — але час іде, а змін немає.</p>
+      </div>
+      <div class="pain-item reveal reveal-d2">
+        <div class="pain-emoji">🛏</div>
+        <h3>Сексу хочеться все рідше — і відчуття вже «не ті»</h3>
+        <p>Раніше було по-іншому, а тепер легше відмовитись, ніж захотіти. Чутливість приглушена. Оргазм або не приходить, або приходить наполовину. І ти соромишся про це говорити навіть з подругами.</p>
+      </div>
+      <div class="pain-item reveal reveal-d3">
+        <div class="pain-emoji">⚠️</div>
+        <h3>Боїшся опущення — або вже підозрюєш у себе</h3>
+        <p>Відчуваєш важкість внизу, особливо до вечора. Або гінеколог сказав «початкова стадія, спостерігаємо». Або у мами було — і тепер думаєш «а як у мене?». Хочеш діяти заздалегідь, поки не пізно.</p>
+      </div>
+      <div class="pain-item reveal reveal-d4">
+        <div class="pain-emoji">🪨</div>
+        <h3>Тіло скуте, поперек ниє, таз «замкнений»</h3>
+        <p>М'язи внизу живота напружені постійно — навіть коли ти розслаблена. Прокидаєшся вже з втомою. Йога допомагає на день-два, масаж — теж. А коріння проблеми не зникає.</p>
+      </div>
+    </div>
+    <div class="pain-dots" id="painDots"></div>
+    <div class="pain-hint">← гортай, щоб подивитись усі →</div>
+
+    <div class="pain-conclude reveal">
+      <p>
+        Якщо впізнала себе хоча б в одному пункті — це <strong>не вирок</strong> і не «вікове». Це слабкі м'язи тазового дна. І їх <strong>сила повертається назад</strong> — за 8 коротких уроків.
+      </p>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY METHOD WORKS ============ -->
+<section class="section section-dark">
+  <div class="deco" style="right:-50px;top:40px;width:160px;height:160px;opacity:.5;animation:floatY 11s ease-in-out infinite">
+    <svg viewBox="0 0 160 160" fill="none">
+      <circle cx="80" cy="80" r="70" stroke="#d94f6e" stroke-width="1" stroke-dasharray="2 6"/>
+      <circle cx="80" cy="80" r="45" stroke="#e87a8f" stroke-width="1" opacity=".4"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="label reveal">💪 Методика</div>
+    <h2 class="reveal">Чому методика <span class="serif accent">WomenFitness</span> працює там, де не справляються зал, йога і пігулки</h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Бо це не «накачати щось зверху» — це повернути роботу м'язів, до яких звичайний фітнес просто не дістає.</p>
+
+    <div class="method-grid" style="margin-top:28px">
+      <div class="method-card reveal">
+        <div class="method-icon">🎯</div>
+        <div class="method-num">01</div>
+        <h3>Працюємо з м'язами, які не «качає» жоден тренажер</h3>
+        <p>М'язи тазового дна — це внутрішній «гамак», який тримає органи малого тазу, контролює сечовипускання і відповідає за чутливість. Жодне присідання, планка чи скручування їх не вмикає. Тільки прицільна робота.</p>
+      </div>
+      <div class="method-card reveal reveal-d1">
+        <div class="method-icon">🌬</div>
+        <div class="method-num">02</div>
+        <h3>Зв'язка «дихання + рух» включає глибокі м'язи</h3>
+        <p>90% жінок не відчувають своє тазове дно — і тому будь-які «вправи Кегеля з ютуба» не дають результату. На курсі ти спершу вчишся <strong style="color:#fff">відчувати</strong>, потім — <strong style="color:#fff">керувати</strong>.</p>
+      </div>
+      <div class="method-card reveal reveal-d2">
+        <div class="method-icon">📈</div>
+        <div class="method-num">03</div>
+        <h3>Система від простого до складного — без ризику нашкодити</h3>
+        <p>Не можна «качати» те, чого ти не відчуваєш. Тому уроки йдуть послідовно: спершу — розслаблення і відчуття, далі — контроль, потім — сила. Методика побудована як сходи.</p>
+      </div>
+      <div class="method-card reveal reveal-d3">
+        <div class="method-icon">🛡</div>
+        <div class="method-num">04</div>
+        <h3>Безпечно, погоджено з гінекологом, без протипоказань</h3>
+        <p>Методика розроблена так, щоб підходити жінкам після пологів, з опущенням, з болісними менструаціями, після 40 — і навіть під час вагітності (в адаптованому форматі).</p>
+      </div>
+    </div>
+
+    <div class="base-block reveal">
+      <h4>Це не «ще один курс». Це база, яку має знати кожна жінка.</h4>
+      <ul class="base-list">
+        <li><span class="ck">✓</span><span><strong>М'язи тазового дна є у кожної жінки</strong> — і з віком, з вагітностями, з пологами вони слабшають. Без винятків.</span></li>
+        <li><span class="ck">✓</span><span><strong>80% жіночих проблем 30+ починаються звідси:</strong> нетримання, опущення, зниження лібідо, болісні менструації, скованість тазу.</span></li>
+        <li><span class="ck">✓</span><span><strong>Цьому не вчать ні в школі, ні в залі, ні навіть у гінеколога.</strong> Лікар лікує, коли вже пізно. Зал тренує те, що видно.</span></li>
+        <li><span class="ck">✓</span><span><strong>5–10 хвилин на день</strong> — це все, що відділяє «знати про це» від «мати результат».</span></li>
+      </ul>
+    </div>
+
+    <p class="method-final reveal">
+      Цей курс не тільки для тих, у кого проблеми. Це курс <span class="highlight" style="background:linear-gradient(180deg,transparent 60%,rgba(232,122,143,.4) 60%);color:#fff">для кожної жінки, яка хоче, щоб у 40, 50, 60 її тіло слухалось</span>.
+    </p>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Почати за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAM ============ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="label reveal">📚 Програма</div>
+    <h2 class="reveal">Програма курсу — <span class="highlight">8 уроків</span> покрокового плану</h2>
+
+    <div class="program-meta reveal reveal-d1" style="margin-top:18px">
+      <span><strong>8</strong> відеоуроків</span>
+      <span><strong>10</strong> вправ</span>
+      <span><strong>3</strong> дихальні практики</span>
+      <span>домашні завдання</span>
+      <span>доступ <strong>назавжди</strong></span>
+    </div>
+
+    <div class="lessons">
+      <div class="lesson open reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">1</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №1</span>Знайомство з тілом: як нарешті відчути м'язи, про які раніше не думала</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>Розминка тазового дна — 5 простих вправ на 5–6 хвилин</li>
+            <li><span class="dot"></span>3 дихальні техніки: грудне, хвильове, діафрагмальне</li>
+            <li><span class="dot"></span>Як «увімкнути» зв'язок «голова → м'язи»</li>
+            <li><span class="dot"></span>Перші відчуття, на які треба звертати увагу</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> ти вперше у житті чітко відчуваєш свої м'язи тазового дна. Закладена основа, без якої ніщо інше не працює.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">2</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №2</span>Тонус і розслаблення: 5 вправ, які повертають тілу контроль</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>5 базових вправ на тонус — дихання + рух</li>
+            <li><span class="dot"></span>Техніка розслаблення: як розрізняти напружені і розслаблені м'язи</li>
+            <li><span class="dot"></span>Чому без розслаблення немає сили</li>
+            <li><span class="dot"></span>Як вписати вправи в ранок або вечір</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> ти починаєш керувати м'язами свідомо — стискати і розслабляти за бажанням.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">3</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №3</span>Прибираємо скованість: як перестати «носити» напруження в тілі</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>Дихальні практики + м'які рухи для зняття стресу</li>
+            <li><span class="dot"></span>Спеціальна техніка для болісної менструації</li>
+            <li><span class="dot"></span>Як «відпустити» затиснутий таз і поперек</li>
+            <li><span class="dot"></span>Техніка «стискання → розслаблення» до автоматизму</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> тіло перестає «триматися» постійно. Поперек ниє менше. Менструація проходить легше.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">4</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №4</span>Вправа «Ліфт» — основа всіх інтимних відчуттів</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>Усвідомлене відчуття тіла зсередини</li>
+            <li><span class="dot"></span>Концентрація на внутрішніх сигналах</li>
+            <li><span class="dot"></span>Утримання і контроль м'язів на час</li>
+            <li><span class="dot"></span>Головна вправа курсу — «Ліфт»</span></li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> опануєш техніку, яка одночасно повертає чутливість, силу і контроль.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">5</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №5</span>Прощавай, підтікання: 3 вправи, які реально працюють</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>3 цільові вправи для м'язів, що відповідають за утримання</li>
+            <li><span class="dot"></span>Як правильно їх виконувати, щоб не нашкодити</li>
+            <li><span class="dot"></span>Графік виконання для швидкого результату</li>
+            <li><span class="dot"></span>Що робити, якщо нічого не відчуваєш</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> перестаєш боятись сміятись, чхати, бігати, стрибати. Тіло знову контролює себе.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">6</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №6</span>Без болю в попереку: техніка для тих, у кого «защемило»</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>3 прості вправи для зняття напруги в попереку і тазі</li>
+            <li><span class="dot"></span>Що робити, якщо на старті з'явився дискомфорт</li>
+            <li><span class="dot"></span>Як не «перекачати» тіло на ентузіазмі</li>
+            <li><span class="dot"></span>Розслаблення як частина системи</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> зникає біль і напруження, які можуть з'являтися у новачків.</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">7</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №7</span>Сила м'язів і повернення задоволення</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>Просунуті практики на силу м'язів тазового дна</li>
+            <li><span class="dot"></span>Як повертається природна чутливість</li>
+            <li><span class="dot"></span>Вправи на яскравіші відчуття у близькості</li>
+            <li><span class="dot"></span>Робота з тілом для задоволення «від себе»</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> чутливість повертається. Відчуття стають яскравіші. Секс — не «треба», а «хочу».</span></div>
+        </div></div>
+      </div>
+
+      <div class="lesson reveal">
+        <button class="lesson-head">
+          <span class="lesson-num">8</span>
+          <span class="lesson-title"><span class="ln-tag">Урок №8</span>Як вплести вправи в життя — щоб результат лишився назавжди</span>
+          <span class="lesson-toggle">+</span>
+        </button>
+        <div class="lesson-body"><div class="lesson-body-inner">
+          <ul class="lesson-list">
+            <li><span class="dot"></span>Мінікомплекс «5 хвилин на день» для самостійної практики</li>
+            <li><span class="dot"></span>Як робити вправи «непомітно»: вдома, в черзі, в авто</li>
+            <li><span class="dot"></span>План на наступні 30 днів після курсу</li>
+            <li><span class="dot"></span>Що робити, якщо хочеш просунутися далі</li>
+          </ul>
+          <div class="lesson-result"><span>🎯</span><span><strong>Результат:</strong> вправи стають звичкою, як чищення зубів. Результат закріплюється на роки.</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <p class="lead reveal" style="margin-top:24px;text-align:center;font-style:italic">
+      Кожен наступний урок будується на попередньому. За <strong style="color:var(--accent-deep)">8 уроків ти проживеш повний цикл</strong>: від «не відчуваю нічого» до «керую тілом свідомо».
+    </p>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Почати курс за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE/AFTER ============ -->
+<section class="section section-soft">
+  <div class="container">
+    <p class="lead reveal" style="font-style:italic;font-family:var(--font-serif);font-size:1.05rem;color:var(--gray-text);margin-bottom:14px">
+      Ти подивилася 8 уроків і думаєш «звучить добре, але що це дасть мені особисто?». Ось 5 точок, у яких ти відчуєш різницю ⬇
+    </p>
+    <div class="label reveal">🔄 До / Після</div>
+    <h2 class="reveal">Що буде з тобою через <span class="highlight">8 уроків</span></h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Не «обіцянка результату», а 5 конкретних точок, у яких ти відчуєш зміну.</p>
+
+    <div class="ba-stack" style="margin-top:28px">
+      <div class="ba-pair reveal">
+        <div class="ba-side ba-before"><div class="ba-tag">🔴 Сьогодні</div><p>Сміх, чхання, біг — і знову незручний момент. Уже носиш щоденки «про всяк випадок».</p></div>
+        <div class="ba-side ba-after"><div class="ba-tag">🟢 Через 8 уроків</div><p>Контролюєш м'язи. Сміятись, стрибати, бігати — без страху і без щоденок.</p></div>
+      </div>
+      <div class="ba-pair reveal reveal-d1">
+        <div class="ba-side ba-before"><div class="ba-tag">🔴 Сьогодні</div><p>Бажання приходить рідко. Чутливість приглушена. Секс — «коли вже треба».</p></div>
+        <div class="ba-side ba-after"><div class="ba-tag">🟢 Через 8 уроків</div><p>Бажання повертається. Чутливість загострюється. Оргазм — яскравіший і повніший.</p></div>
+      </div>
+      <div class="ba-pair reveal reveal-d2">
+        <div class="ba-side ba-before"><div class="ba-tag">🔴 Сьогодні</div><p>Менструація — це 2–3 дні з пігулкою і думкою «коли вже все».</p></div>
+        <div class="ba-side ba-after"><div class="ba-tag">🟢 Через 8 уроків</div><p>Цикл проходить легше. Біль знижується або зникає. Тіло більше не «вибиває» з життя.</p></div>
+      </div>
+      <div class="ba-pair reveal reveal-d3">
+        <div class="ba-side ba-before"><div class="ba-tag">🔴 Сьогодні</div><p>Відчуття важкості внизу, особливо до вечора. Страх «що це опущення».</p></div>
+        <div class="ba-side ba-after"><div class="ba-tag">🟢 Через 8 уроків</div><p>М'язи тримають органи на своєму місці. Профілактика опущення — на роки вперед.</p></div>
+      </div>
+      <div class="ba-pair reveal reveal-d4">
+        <div class="ba-side ba-before"><div class="ba-tag">🔴 Сьогодні</div><p>Поперек ниє, таз «замкнений», тіло скуте навіть після сну.</p></div>
+        <div class="ba-side ba-after"><div class="ba-tag">🟢 Через 8 уроків</div><p>Тіло розслаблене. Поперек не болить. Прокидаєшся з відчуттям легкості.</p></div>
+      </div>
+    </div>
+
+    <p class="lead reveal" style="margin-top:24px;text-align:center">
+      І найголовніше — <strong style="color:var(--accent-deep)">ці зміни не зникають</strong>. У 8-му уроці ти отримуєш систему, як вплести вправи у звичне життя.
+    </p>
+
+    <div class="trust-strip reveal">
+      <span>✓ 5–10 хв</span><span class="sep">·</span>
+      <span>✓ Без тренажерів</span><span class="sep">·</span>
+      <span>✓ Доступ назавжди</span><span class="sep">·</span>
+      <span>✓ Погоджено з гінекологом</span>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="label reveal">📱 Формат навчання</div>
+    <h2 class="reveal">Як проходить навчання</h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Все максимально просто: телефон у руці — і ти вже на курсі. Жодних платформ, жодних логінів.</p>
+
+    <div class="how-grid" style="margin-top:28px">
+      <div class="how-card reveal">
+        <div class="how-icon">📱</div>
+        <h3>Доступ до уроків у Telegram-боті</h3>
+        <p>Усі 8 уроків — у боті, який ти вже знаєш як користуватись. Без сайтів, без додатків, без паролів. <strong>Працює на будь-якому телефоні і ноутбуці.</strong></p>
+      </div>
+      <div class="how-card reveal reveal-d1">
+        <div class="how-icon">⏱</div>
+        <h3>По 5–10 хвилин на день — у твоєму ритмі</h3>
+        <p>Уроки короткі, без води. Вранці з кавою, ввечері перед сном або частинами. <strong>Жорсткого графіку немає — ти сама обираєш темп.</strong></p>
+      </div>
+      <div class="how-card reveal reveal-d2">
+        <div class="how-icon">💬</div>
+        <h3>Чат-підтримка особисто від авторки</h3>
+        <p>Виникло питання — пишеш у чат, отримуєш відповідь. Не бот, не «помічник». <strong>Сама Анастасія</strong> розбирає твої питання.</p>
+      </div>
+      <div class="how-card reveal reveal-d3">
+        <div class="how-icon">♾️</div>
+        <h3>Доступ — назавжди</h3>
+        <p>Купуєш один раз — і повертаєшся до уроків коли захочеш. Через місяць, через рік, після других пологів. <strong>Курс лишається з тобою.</strong></p>
+      </div>
+    </div>
+
+    <div class="homework-block reveal">
+      <div class="homework-tag">🎁 Особистий бонус</div>
+      <h3>Виконаєш усі домашні завдання — отримаєш особистий розбір від Анастасії</h3>
+      <p>Після кожного уроку є коротке домашнє завдання (1–2 вправи на 1–2 дні). Якщо пройдеш курс повністю і виконаєш усі домашки — авторка особисто подивиться, як у тебе виходить, і дасть індивідуальні поради.</p>
+      <blockquote>Це не «опція для відмінниць» — це твоя страховка від помилок і гарантія, що ти все робиш правильно.</blockquote>
+    </div>
+
+    <div class="summary-block reveal">
+      <h4>За 8 коротких уроків ти:</h4>
+      <ul class="summary-list">
+        <li><span class="ck">✓</span><span>Навчишся <strong>відчувати</strong> свої м'язи тазового дна — те, чого 90% жінок не вміють</span></li>
+        <li><span class="ck">✓</span><span>Опануєш <strong>10 практичних вправ + 3 дихальні практики</strong>, які працюють вдома без обладнання</span></li>
+        <li><span class="ck">✓</span><span><strong>Заберешся</strong> з постійного напруження в попереку і тазі</span></li>
+        <li><span class="ck">✓</span><span><strong>Повернеш</strong> контроль над тілом — без страху сміятись, бігати, стрибати з дітьми</span></li>
+        <li><span class="ck">✓</span><span><strong>Закладеш фундамент</strong> жіночого здоров'я на 10–20 років вперед</span></li>
+      </ul>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTHOR ============ -->
+<section class="section section-dark" style="background:var(--dark2)">
+  <div class="container">
+    <div class="label reveal">👩‍⚕️ Про авторку</div>
+
+    <div class="author-photo reveal">
+      <div class="author-photo-inner">
+        <picture>
+          <source srcset="images/logo.avif" type="image/avif">
+          <img src="images/logo.png" alt="Анастасія Максимівна" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="stamp">Авторка курсу</div>
+    </div>
+
+    <div class="author-name reveal reveal-d1">Анастасія Максимівна</div>
+    <div class="author-role reveal reveal-d2">
+      Авторка методики WomenFitness<span class="dot">·</span>Сертифікований спеціаліст з контролю м'язів тазового дна<span class="dot">·</span>Експерт з жіночого здоров'я
+    </div>
+
+    <ul class="regalia reveal reveal-d3">
+      <li><span class="ck">✓</span><span><strong>Понад 3 роки практики</strong> в галузі жіночого здоров'я та фізичної реабілітації</span></li>
+      <li><span class="ck">✓</span><span><strong>917 жінок</strong> уже пройшли мої навчальні програми і повернули контроль над своїм тілом</span></li>
+      <li><span class="ck">✓</span><span><strong>Авторка методики WomenFitness</strong> — системи на дихальних і м'язових практиках, без пігулок і операцій</span></li>
+      <li><span class="ck">✓</span><span><strong>Сертифікований спеціаліст</strong> з контролю м'язів тазового дна</span></li>
+      <li><span class="ck">✓</span><span><strong>Методика погоджена з практикуючим гінекологом</strong> і не має протипоказань для будь-якого віку</span></li>
+      <li><span class="ck">✓</span><span><strong>Працювала з жінками після пологів, з опущенням, нетриманням</strong> — знаю, як підібрати навантаження під кожен випадок</span></li>
+    </ul>
+
+    <div class="author-quote reveal">
+      <p>Я вірю, що турбота про жіноче здоров'я має бути такою ж природною, як чищення зубів. Без сорому, без табу, без «це не обговорюють».</p>
+      <p>Мене дратує, що жінки роками живуть із підтіканням, болем, скованістю — і вважають, що «так у всіх». Ні. Так не має бути. І я даю систему, яка повертає контроль та легкість.</p>
+      <p>Твоє тіло — твоя опора. Я просто допомагаю його почути.</p>
+      <div class="sign">— Анастасія</div>
+    </div>
+
+    <p class="lead reveal" style="margin-top:24px;text-align:center;font-style:italic;color:#c9b3b9">
+      Ось що говорять жінки, які вже пройшли курс ⬇
+    </p>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section section-dark" style="padding-bottom:48px">
+  <div class="container">
+    <div class="label reveal">💬 Відгуки</div>
+    <h2 class="reveal"><span class="highlight">917 жінок</span> уже пройшли програми WomenFitness</h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Ось що вони говорять після курсу.</p>
+  </div>
+
+  <div class="reviews-track" style="margin-top:24px">
+    <div class="review-card" data-video="videos/reviews/1.mp4">
+      <video preload="metadata" muted playsinline poster=""><source src="videos/reviews/1.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №1</div>
+      <div class="play-btn">▶</div>
+    </div>
+    <div class="review-card" data-video="videos/reviews/2.mp4">
+      <video preload="metadata" muted playsinline><source src="videos/reviews/2.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №2</div>
+      <div class="play-btn">▶</div>
+    </div>
+    <div class="review-card" data-video="videos/reviews/3.mp4">
+      <video preload="metadata" muted playsinline><source src="videos/reviews/3.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №3</div>
+      <div class="play-btn">▶</div>
+    </div>
+    <div class="review-card" data-video="videos/reviews/4.mp4">
+      <video preload="metadata" muted playsinline><source src="videos/reviews/4.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №4</div>
+      <div class="play-btn">▶</div>
+    </div>
+    <div class="review-card" data-video="videos/reviews/5.mp4">
+      <video preload="metadata" muted playsinline><source src="videos/reviews/5.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №5</div>
+      <div class="play-btn">▶</div>
+    </div>
+    <div class="review-card" data-video="videos/reviews/6.mp4">
+      <video preload="metadata" muted playsinline><source src="videos/reviews/6.mp4#t=0.5" type="video/mp4"></video>
+      <div class="badge">Відгук №6</div>
+      <div class="play-btn">▶</div>
+    </div>
+  </div>
+  <div class="reviews-hint">← гортай, щоб подивитись усі →</div>
+
+  <div class="container" style="margin-top:8px">
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="guarantee-icon reveal">
+      <svg width="40" height="44" viewBox="0 0 40 44" fill="none">
+        <path d="M20 2L4 8v14c0 11 7 18 16 20 9-2 16-9 16-20V8L20 2z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M14 22l5 5 8-10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="label reveal" style="display:block;text-align:center;margin:0 auto 14px">🛡 Гарантія</div>
+    <h2 class="reveal" style="text-align:center">Подвійна гарантія — <span class="highlight">без жодних ризиків</span> для тебе</h2>
+
+    <div class="guarantee-stack" style="margin-top:28px">
+      <div class="guarantee-card reveal">
+        <div class="ic">🛡</div>
+        <div>
+          <h3>Гарантія №1. 14 днів повернення коштів</h3>
+          <p>Купуєш курс, починаєш дивитися уроки. Якщо протягом <strong style="color:var(--accent-deep)">14 днів</strong> розумієш, що це не твоє — повертаю гроші повністю. Без анкет, без «доведи, що ти намагалась».</p>
+        </div>
+      </div>
+      <div class="guarantee-card reveal reveal-d1">
+        <div class="ic">🎯</div>
+        <div>
+          <h3>Гарантія №2. Гарантія результату</h3>
+          <p>Якщо пройдеш усі 8 уроків, виконаєш домашні завдання, впровадиш вправи у повсякденне життя та будеш регулярно їх виконувати — і не побачиш жодних змін у тілі, я також поверну кошти. Я настільки впевнена в методиці, бо відпрацювала її з сотнями жінок.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guarantee-final reveal">
+      Жодних ризиків. Або ти повертаєш контроль над тілом — або забираєш гроші назад.
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за 390 грн <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORK + PACKAGE + FINAL CTA ============ -->
+<section class="section section-soft" id="buy">
+  <div class="container">
+    <div class="label reveal">🎯 Розпуття</div>
+    <h2 class="reveal">Зараз ти на <span class="highlight">роздоріжжі</span></h2>
+    <p class="lead reveal reveal-d1" style="margin-top:14px">Два сценарії — і обидва реальні. Обирати тобі.</p>
+
+    <div class="fork-stack" style="margin-top:24px">
+      <div class="fork-pair reveal">
+        <div class="fork-side fork-bad"><div class="fork-tag">❌ Якщо нічого не міняти</div><p>Через 3 місяці підтікання нікуди не зникне — лише стане звичкою.</p></div>
+        <div class="fork-side fork-good"><div class="fork-tag">✅ Якщо почнеш сьогодні</div><p>Через 3 місяці забудеш, що таке щоденки. Сміятись і бігати — без страху.</p></div>
+      </div>
+      <div class="fork-pair reveal reveal-d1">
+        <div class="fork-side fork-bad"><div class="fork-tag">❌ Якщо нічого не міняти</div><p>Бажання до сексу буде приходити все рідше, чутливість — стиратись.</p></div>
+        <div class="fork-side fork-good"><div class="fork-tag">✅ Якщо почнеш сьогодні</div><p>Бажання повернеться. Чутливість загостриться. Секс — «хочу», а не «треба».</p></div>
+      </div>
+      <div class="fork-pair reveal reveal-d2">
+        <div class="fork-side fork-bad"><div class="fork-tag">❌ Якщо нічого не міняти</div><p>Біль у попереку і скованість стануть фоном життя. «Так у всіх», скажеш собі.</p></div>
+        <div class="fork-side fork-good"><div class="fork-tag">✅ Якщо почнеш сьогодні</div><p>Тіло розслабиться. Поперек перестане боліти. Прокидатимешся легкою.</p></div>
+      </div>
+      <div class="fork-pair reveal reveal-d3">
+        <div class="fork-side fork-bad"><div class="fork-tag">❌ Якщо нічого не міняти</div><p>Опущення (якщо вже є) піде далі. Гінеколог скаже «треба робити».</p></div>
+        <div class="fork-side fork-good"><div class="fork-tag">✅ Якщо почнеш сьогодні</div><p>М'язи триматимуть органи. Профілактика опущення — на роки.</p></div>
+      </div>
+      <div class="fork-pair reveal reveal-d4">
+        <div class="fork-side fork-bad"><div class="fork-tag">❌ Якщо нічого не міняти</div><p>Через рік-два будеш платити сотні доларів за процедури, які прибирають симптом.</p></div>
+        <div class="fork-side fork-good"><div class="fork-tag">✅ Якщо почнеш сьогодні</div><p>Один раз інвестуєш 390 грн — і отримуєш систему по 5 хв на день.</p></div>
+      </div>
+    </div>
+
+    <div class="author-msg reveal">
+      <p>Я не можу прийняти це рішення за тебе. Але я знаю, з яким полегшенням жінки пишуть мені через місяць: <strong>«Шкода, що я не зробила цього раніше»</strong>.</p>
+      <div class="sign">— Анастасія</div>
+    </div>
+
+    <!-- Package list -->
+    <div class="label reveal" style="margin-top:48px">📦 Повний пакет</div>
+    <h2 class="reveal">Повний список, що ти отримаєш на курсі</h2>
+
+    <div class="package-list" style="margin-top:20px">
+      <div class="package-item reveal"><div class="ic">📘</div><div class="package-item-text"><strong>8 практичних уроків</strong> жіночого фітнесу зсередини<div class="val">цінність: 1990 грн</div></div></div>
+      <div class="package-item reveal reveal-d1"><div class="ic">🧘</div><div class="package-item-text"><strong>10 вправ + 3 дихальні практики</strong> з відеоінструкціями<div class="val">цінність: 690 грн</div></div></div>
+      <div class="package-item reveal reveal-d2"><div class="ic">🎁</div><div class="package-item-text"><strong>БОНУС №1.</strong> Урок з гінекологом — медичний розбір програми<div class="val">цінність: 590 грн</div></div></div>
+      <div class="package-item reveal reveal-d3"><div class="ic">🎁</div><div class="package-item-text"><strong>БОНУС №2.</strong> Чек-лист «Аналізи для жінки 30+»<div class="val">цінність: 290 грн</div></div></div>
+      <div class="package-item reveal reveal-d4"><div class="ic">🎁</div><div class="package-item-text"><strong>БОНУС №3.</strong> Закрита Telegram-спільнота<div class="val">цінність: 490 грн</div></div></div>
+      <div class="package-item reveal"><div class="ic">💬</div><div class="package-item-text"><strong>Чат-підтримка особисто від Анастасії</strong><div class="val">цінність: 990 грн</div></div></div>
+      <div class="package-item reveal reveal-d1"><div class="ic">🎯</div><div class="package-item-text"><strong>Особистий розбір</strong> за виконання домашок<div class="val">цінність: 1500 грн</div></div></div>
+      <div class="package-item no-price reveal reveal-d2"><div class="ic">♾️</div><div class="package-item-text"><strong>Доступ до курсу — назавжди</strong><div class="val">безцінно</div></div></div>
+      <div class="package-item no-price reveal reveal-d3"><div class="ic">🛡</div><div class="package-item-text"><strong>Подвійна гарантія повернення коштів</strong><div class="val">14 днів</div></div></div>
+    </div>
+
+    <div class="price-summary reveal">
+      <div class="price-row-sum"><span>Загальна цінність пакету</span><strong>6 540 грн</strong></div>
+      <div class="price-row-sum"><span>Стара ціна</span><span class="strike">2 390 грн</span></div>
+      <div class="price-row-sum divider final"><span>Твоя ціна сьогодні</span><strong>390 грн</strong></div>
+      <div class="price-row-sum save"><span>Економія</span><span>6 150 грн (–94%)</span></div>
+    </div>
+
+    <!-- Final timer + CTA -->
+    <div class="timer-card large reveal" style="margin-top:24px">
+      <div class="timer-label"><span class="live-dot"></span>Знижка –75% спливе через</div>
+      <div class="timer-units" data-timer>
+        <div class="timer-unit"><div class="timer-num" data-h>00</div><div class="timer-name">годин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-m>10</div><div class="timer-name">хвилин</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" data-s>00</div><div class="timer-name">секунд</div></div>
+      </div>
+    </div>
+
+    <div class="btn-wrap reveal" style="margin-top:18px">
+      <a href="#buy" class="btn-primary" style="padding:22px;font-size:1rem">🎁 Забрати курс за 390 грн <span class="arrow">→</span></a>
+      <div class="btn-note">🔒 Захищена оплата · миттєвий доступ у Telegram</div>
+      <div class="btn-note" style="margin-top:4px">🛡 14 днів повернення коштів без питань</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="label reveal">❓ FAQ</div>
+    <h2 class="reveal">Питання, які <span class="highlight">найчастіше ставлять</span></h2>
+
+    <div class="faq-list" style="margin-top:24px">
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Мені за 40 / 50 — це вже пізно?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Ні. М'язи тазового дна реагують на правильну роботу в будь-якому віці. У мене є учениці, які прийшли в 55 і повернули собі контроль за 2 місяці. Чим раніше — тим легше, але «пізно» не буває.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Я ніколи не займалась нічим подібним. Розберусь?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Так. Курс побудований саме для тих, хто починає з нуля. Перші 2 уроки — це знайомство з власним тілом. Тобі не потрібен жодний попередній досвід.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Скільки часу займає? У мене троє дітей і робота.</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">5–10 хвилин на день. Це менше, ніж ти витрачаєш на ранкову каву. Вправи можна робити поки чистиш зуби, поки чекаєш на чайник, перед сном у ліжку.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Я після пологів. Можна мені?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Так, але важливо, скільки часу пройшло. Якщо пологи були більш ніж 6–8 тижнів тому і немає медичних обмежень — можна сміливо починати. Курс саме і створений для післяпологового відновлення.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">У мене вже є опущення / нетримання / болі. Це не нашкодить?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Ні. Методика побудована від м'якого до сильного — спершу ти вчишся відчувати м'язи, далі — керувати ними, і тільки потім працюєш на силу. У чаті можна обговорити свій випадок особисто.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Чи потрібні тренажери, гантелі, килимок?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Ні. Все, що тобі потрібно — це тіло, дихання і 5–10 хвилин часу. Можеш робити навіть у ліжку.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Коли побачу перший результат?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Перші зміни — через 2–3 тижні регулярної практики: менше підтікання при сміху, легша менструація, відчуття «опори» в тілі. Стійкий результат — через 1,5–2 місяці.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Як я отримаю доступ після оплати?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Одразу після оплати тебе автоматично переадресують у Telegram-бот. Натискаєш «Старт» — і всі уроки відкриваються. Доступ лишається назавжди.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Чому так дешево? У чому підступ?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Жодного підступу. Це акційна ціна для жінок, які купують зараз. Після закінчення таймеру курс продається за повну ціну 2 390 грн. Це не «вічна знижка» — це чесне обмеження за часом.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-head"><span class="faq-q">Як працює гарантія повернення коштів?</span><span class="faq-icon">+</span></button><div class="faq-body"><div class="faq-body-inner">Просто пишеш Анастасії в чат підтримки протягом 14 днів — і кошти повертаються повністю, без анкет і «доказів».</div></div></div>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="#buy" class="btn-primary">🎁 Приєднатися за спеціальною ціною <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wordmark">
+    <div class="mark">W</div>
+    <div class="nm"><span style="color:#c9b3b9">WomenFitness</span><small>жіноче здоров'я</small></div>
+  </div>
+
+  <h4>Підтримка</h4>
+  <p>Питання щодо курсу, оплати, доступу — пиши в <a href="#">Telegram @womenfitness_support</a> або на пошту <a href="mailto:info@womenfitness.ua">info@womenfitness.ua</a></p>
+
+  <div class="legal">
+    <h4>Земляний Михайло Сергійович ФОП</h4>
+    <p>ЄДРПОУ 3758302175<br>m.zemlyanie@gmail.com</p>
+
+    <h4 style="margin-top:18px">Бржестовська Ганна Юріївна ФОП</h4>
+    <p>ЄДРПОУ 2877703349<br>894159@gmail.com</p>
+
+    <p style="margin-top:22px;font-size:.72rem;line-height:1.55;color:#6b5358">
+      IMPORTANT: Do not enter your name and email until you have read the Legal Disclaimer. The use of our site is subject to our Terms and Conditions. In addition, this page and our site make no guarantees and will not make any guarantees about your ability to generate results with your ideas, information, tools and resources, or strategies. You should know that all products and services by our company are for educational and informational purposes only. Nothing on this website, or any of our content or curriculum, is a promise, implication, or guarantee of results. Use caution and always consult your accountant, lawyer or professional adviser before acting on this or any information related to a lifestyle change or your business and finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.
+    </p>
+
+    <p style="margin-top:14px;font-size:.72rem;line-height:1.55;color:#6b5358">
+      ВАЖЛИВО: не вводьте своє ім'я та контактну інформацію, доки не прочитаєте Правове Повідомлення. Використання нашого сайту регулюється нашими Умовами та положеннями. На цій сторінці та нашому сайті не надається жодних гарантій щодо вашої здатності досягти результатів з вашими ідеями, інформацією, інструментами, ресурсами чи стратегіями. Усі продукти та послуги нашої компанії призначені виключно для освітніх та інформаційних цілей. Ніщо на цьому сайті або в будь-якому нашому навчальному матеріалі не є обіцянкою чи гарантією результатів. Будьте обережні та радьтеся зі своїм бухгалтером, юристом або професійним консультантом перед тим, як діяти на основі цієї або будь-якої іншої інформації, що стосується зміни способу життя, вашого бізнесу чи фінансів. Ви самостійно несете відповідальність за свої рішення, дії та результати. Реєструючись на цьому сайті, ви погоджуєтеся не намагатися притягти нас до відповідальності за ваші рішення, дії чи результати за будь-яких обставин.
+    </p>
+
+    <p style="margin-top:22px"><a href="#">Політика конфіденційності</a></p>
+    <p style="margin-top:8px"><a href="#">Публічна оферта</a></p>
+
+    <p style="margin-top:18px;opacity:.6">© 2026 WomenFitness. Усі права захищено.</p>
+  </div>
+</footer>
+
+</div><!-- /.phone-wrap -->
+
+<!-- ============ STICKY BAR ============ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sb-price">
+    <span class="sb-old">2390 грн</span>
+    <span class="sb-new">390 грн</span>
+  </div>
+  <div class="sb-timer" data-timer-mini>⏱ <span data-mini>10:00</span></div>
+  <a href="#buy" class="sb-cta">Забрати <span style="opacity:.8">→</span></a>
+</div>
+
+<script>
+// ---- Timer (synced, 10min countdown stored in sessionStorage) ----
+(function(){
+  const KEY = 'wf_timer_end_v1';
+  const DUR = 10 * 60 * 1000;
+  let end = +sessionStorage.getItem(KEY);
+  if(!end || end - Date.now() <= 0){
+    end = Date.now() + DUR;
+    sessionStorage.setItem(KEY, end);
+  }
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    let rem = end - Date.now();
+    if(rem <= 0){
+      end = Date.now() + DUR;
+      sessionStorage.setItem(KEY, end);
+      rem = DUR;
+    }
+    const total = Math.floor(rem/1000);
+    const h = Math.floor(total/3600);
+    const m = Math.floor((total%3600)/60);
+    const s = total%60;
+    document.querySelectorAll('[data-timer]').forEach(t => {
+      t.querySelector('[data-h]').textContent = pad(h);
+      t.querySelector('[data-m]').textContent = pad(m);
+      t.querySelector('[data-s]').textContent = pad(s);
+    });
+    document.querySelectorAll('[data-mini]').forEach(t => {
+      t.textContent = pad(m) + ':' + pad(s);
+    });
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ---- Auto start date (tomorrow, in Ukrainian) ----
+(function(){
+  const months = ['січ.','лют.','берез.','квіт.','трав.','черв.','лип.','серп.','верес.','жовт.','лист.','груд.'];
+  const t = new Date();
+  t.setDate(t.getDate() + 1);
+  const txt = t.getDate() + ' ' + months[t.getMonth()];
+  document.querySelectorAll('[data-start-date]').forEach(el => el.textContent = txt);
+})();
+
+// ---- Hero video sound toggle ----
+(function(){
+  const wrap = document.querySelector('.hero-video-wrap');
+  const vid = wrap && wrap.querySelector('.hero-video');
+  const btn = wrap && wrap.querySelector('.hero-sound');
+  if(!wrap || !vid || !btn) return;
+  btn.addEventListener('click', () => {
+    vid.muted = !vid.muted;
+    wrap.classList.toggle('unmuted', !vid.muted);
+    if(vid.paused) vid.play().catch(()=>{});
+  });
+})();
+
+// ---- Pain carousel dots ----
+(function(){
+  const track = document.getElementById('painTrack');
+  const dotsWrap = document.getElementById('painDots');
+  if(!track || !dotsWrap) return;
+  const items = track.querySelectorAll('.pain-item');
+  items.forEach(() => {
+    const d = document.createElement('span');
+    dotsWrap.appendChild(d);
+  });
+  const dots = dotsWrap.querySelectorAll('span');
+  function update(){
+    const sl = track.scrollLeft;
+    const w = track.clientWidth;
+    let active = 0;
+    items.forEach((it, i) => {
+      const center = it.offsetLeft + it.offsetWidth/2 - sl;
+      if(Math.abs(center - w/2) < it.offsetWidth/2) active = i;
+    });
+    dots.forEach((d, i) => d.classList.toggle('act', i === active));
+  }
+  track.addEventListener('scroll', update, {passive:true});
+  update();
+  dots[0] && dots[0].classList.add('act');
+})();
+
+// ---- Collapsible bonus cards ----
+(function(){
+  document.querySelectorAll('.bonus-card').forEach(card => {
+    const tag = card.querySelector('.bonus-tag');
+    const h3 = card.querySelector('h3');
+    const p = card.querySelector('p');
+    const result = card.querySelector('.bonus-result');
+    if(!tag || !h3 || !p) return;
+
+    const head = document.createElement('div');
+    head.className = 'bonus-head';
+    const headText = document.createElement('div');
+    headText.className = 'bonus-head-text';
+    headText.appendChild(tag);
+    headText.appendChild(h3);
+    const toggle = document.createElement('div');
+    toggle.className = 'bonus-toggle';
+    toggle.textContent = '+';
+    head.appendChild(headText);
+    head.appendChild(toggle);
+
+    const body = document.createElement('div');
+    body.className = 'bonus-body';
+    const inner = document.createElement('div');
+    inner.className = 'bonus-body-inner';
+    inner.appendChild(p);
+    if(result) inner.appendChild(result);
+    body.appendChild(inner);
+
+    card.innerHTML = '';
+    card.appendChild(head);
+    card.appendChild(body);
+
+    head.addEventListener('click', () => card.classList.toggle('open'));
+  });
+})();
+
+// ---- Inject lesson videos (autoplay muted, above title) ----
+(function(){
+  const allVideos = [];
+  document.querySelectorAll('.lesson').forEach((lesson, i) => {
+    const n = i + 1;
+    const wrap = document.createElement('div');
+    wrap.className = 'lesson-video';
+    wrap.innerHTML =
+      '<video muted autoplay loop playsinline preload="none" poster=""><source data-src="videos/lessons/' + n + '.mp4" type="video/mp4"></video>' +
+      '<div class="lv-tag">Урок №' + n + '</div>';
+    lesson.prepend(wrap);
+    const v = wrap.querySelector('video');
+    allVideos.push(v);
+  });
+
+  // Lazy-load + play when scrolled into view, pause when out
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const v = e.target;
+        const src = v.querySelector('source');
+        if(e.isIntersecting){
+          if(src && !src.src && src.dataset.src){
+            src.src = src.dataset.src;
+            v.load();
+          }
+          v.play().catch(()=>{});
+        } else {
+          v.pause();
+        }
+      });
+    }, {threshold:0.25});
+    allVideos.forEach(v => io.observe(v));
+  } else {
+    allVideos.forEach(v => {
+      const src = v.querySelector('source');
+      if(src && src.dataset.src){ src.src = src.dataset.src; v.load(); }
+      v.play().catch(()=>{});
+    });
+  }
+})();
+
+// ---- Lesson accordion ----
+document.querySelectorAll('.lesson-head').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.lesson');
+    item.classList.toggle('open');
+  });
+});
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-head').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.faq-item').classList.toggle('open');
+  });
+});
+
+// ---- Reveal on scroll (with safe fallbacks) ----
+document.documentElement.classList.add('js-ready');
+const revealEls = document.querySelectorAll('.reveal');
+function showAll(){ revealEls.forEach(el => el.classList.add('vis')); }
+if(!('IntersectionObserver' in window)){
+  showAll();
+} else {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('vis');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.05, rootMargin:'0px 0px -20px 0px'});
+  // mark elements already in viewport as visible immediately
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  revealEls.forEach(el => {
+    const r = el.getBoundingClientRect();
+    if(r.top < vh && r.bottom > 0) el.classList.add('vis');
+    else io.observe(el);
+  });
+  // safety net — if scrolling never happens (e.g. inside a preview iframe), reveal everything after 1.5s
+  setTimeout(showAll, 1500);
+}
+
+// ---- Review video play ----
+document.querySelectorAll('.review-card').forEach(card => {
+  const vid = card.querySelector('video');
+  card.addEventListener('click', () => {
+    // pause other videos
+    document.querySelectorAll('.review-card video').forEach(v => {
+      if(v !== vid){ v.pause(); v.closest('.review-card').classList.remove('playing'); }
+    });
+    if(vid.paused){
+      vid.muted = false;
+      vid.controls = true;
+      vid.play().catch(()=>{ vid.muted = true; vid.play(); });
+      card.classList.add('playing');
+    } else {
+      vid.pause();
+      card.classList.remove('playing');
+    }
+  });
+});
+
+// ---- Sticky bar visibility ----
+(function(){
+  const bar = document.getElementById('stickyBar');
+  const hero = document.querySelector('.hero');
+  const final = document.getElementById('buy');
+  let visible = false;
+  function check(){
+    if(!hero || !final) return;
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const finalTop = final.getBoundingClientRect().top;
+    const vh = window.innerHeight;
+    const shouldShow = heroBottom < 0 && finalTop > vh * .4;
+    if(shouldShow !== visible){
+      visible = shouldShow;
+      bar.classList.toggle('visible', visible);
+    }
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  window.addEventListener('resize', check);
+  check();
+})();
+</script>
+
+</body>
+</html>
