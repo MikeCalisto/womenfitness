@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "site/design/a/index.html"
+        ],
+        "createdAt": "2026-09-10T16:15:21.521Z",
+        "reason": "landing-design house style (user's own skill) prescribes the tinted CTA/sticker shadow and spray text-shadow: skill file ~/.claude/skills/landing-design/SKILL.md sections 5-7"
+      }
+    ]
+  }
+}

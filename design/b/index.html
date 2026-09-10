@@ -126,8 +126,10 @@ h1 .thin{font-weight:300;letter-spacing:-.02em}
 .vs-label{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--plum)}
 .vs-strike{margin-left:auto;font-size:.9rem;color:var(--rose);opacity:.55}
 .vs-body{font-size:.85rem;line-height:1.66;color:var(--ink-soft)}
-.cause{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rose);
-  border-radius:4px;padding:18px 19px;font-size:.88rem;line-height:1.74;color:var(--ink)}
+.cause{position:relative;margin-top:26px;background:var(--paper);border:1px solid var(--line);
+  border-radius:4px;padding:26px 19px 18px;font-size:.88rem;line-height:1.74;color:var(--ink)}
+.cause::before{content:'ПРИЧИНА';position:absolute;top:-8px;left:18px;background:var(--paper);
+  padding:0 8px;font-size:.6rem;font-weight:700;letter-spacing:.2em;color:var(--rose)}
 .cause strong{color:var(--rose-deep)}
 .cause .u{color:var(--rose-deep);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
 
