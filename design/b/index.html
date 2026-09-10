@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Варіант B · Quiet Clinic — WomenFitness</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/images/v2/hero.jpg" fetchpriority="high">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --font:'Jost',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --ink:#241a22; --ink-soft:#5a4c55;
+  --rose:#b5566b; --rose-deep:#8e3d51; --rose-soft:#e8c3cb;
+  --sand:#efe6dc; --ivory:#faf5f0; --paper:#fffcf9;
+  --line:#e2d6cb;
+  --plum:#3a2434;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--ivory);color:var(--ink);line-height:1.65;font-size:.9rem}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.phone-wrap{max-width:480px;margin:0 auto;position:relative;background:var(--ivory);overflow:clip}
+@media(min-width:520px){.phone-wrap{box-shadow:0 0 70px rgba(58,36,52,.13)}}
+.container{padding:0 24px}
+.section{position:relative;overflow:hidden}
+
+.r{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.r.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* ── paper texture + hairlines ── */
+.grid-lines{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 34px;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);
+          mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+
+/* ── hero ── */
+.hero{padding:24px 0 48px;background:
+  radial-gradient(120% 60% at 85% 0%,#fdeef0 0%,transparent 60%),
+  radial-gradient(90% 50% at 0% 40%,#f4ece2 0%,transparent 62%),var(--paper)}
+.hero .container{position:relative;z-index:2}
+.sticker{display:inline-flex;align-items:center;gap:8px;transform:rotate(-1.6deg);
+  background:var(--rose);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;padding:8px 14px;border-radius:4px;margin-bottom:22px;
+  box-shadow:4px 4px 0 rgba(181,86,107,.18)}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulseDot 2s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.4}}
+
+h1{font-size:clamp(1.7rem,7.2vw,2.25rem);font-weight:900;letter-spacing:-.03em;line-height:1.13;color:var(--plum)}
+h1 .thin{font-weight:300;letter-spacing:-.02em}
+.hl{background:linear-gradient(180deg,transparent 60%,rgba(181,86,107,.28) 60%);padding:0 4px;margin:0 -4px}
+.rule{width:54px;height:2px;background:var(--rose);margin:20px 0 16px;border-radius:2px}
+.hero-sub{color:var(--ink-soft);font-size:.9rem;line-height:1.72;font-weight:300;max-width:33ch}
+
+.spec{margin-top:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4px 0}
+.spec-row{display:flex;align-items:center;gap:12px;padding:11px 2px;font-size:.82rem;color:var(--ink)}
+.spec-row+.spec-row{border-top:1px dashed var(--line)}
+.spec-n{font-size:.66rem;font-weight:700;letter-spacing:.14em;color:var(--rose);width:24px;flex:0 0 auto}
+
+.hero-photo{position:relative;margin:28px 6px 0 10px;padding:0}
+.hero-photo::before{content:'';position:absolute;top:-10px;left:-14px;right:12px;bottom:14px;
+  border:1px dashed var(--rose-soft);border-radius:4px;transform:rotate(-1.6deg)}
+.hero-photo::after{content:'';position:absolute;top:12px;left:14px;right:-12px;bottom:-12px;
+  border:2px solid var(--rose);border-radius:4px;animation:sway 8s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(1.2deg)}50%{transform:rotate(2deg) translate(2px,-2px)}}
+.hero-photo img{position:relative;z-index:2;display:block;width:100%;border-radius:2px;
+  box-shadow:0 18px 40px rgba(58,36,52,.18);filter:saturate(.94)}
+.cap{position:relative;z-index:2;margin-top:12px;font-size:.68rem;letter-spacing:.06em;
+  color:var(--ink-soft);text-align:right;padding-right:4px}
+
+/* ── ticket price ── */
+.ticket{position:relative;margin-top:32px;background:var(--paper);border:1px solid var(--line);
+  border-radius:6px;padding:22px 20px 20px;text-align:center;box-shadow:0 14px 34px rgba(58,36,52,.08)}
+.ticket::before,.ticket::after{content:'';position:absolute;top:50%;width:18px;height:18px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--line);transform:translateY(-50%)}
+.ticket::before{left:-10px;clip-path:inset(0 0 0 50%)}
+.ticket::after{right:-10px;clip-path:inset(0 50% 0 0)}
+.price-old{font-size:.85rem;color:#a4939c;text-decoration:line-through}
+.price-new{font-size:2.9rem;font-weight:900;letter-spacing:-.045em;line-height:1;color:var(--plum);margin:2px 0 6px}
+.price-new small{font-size:1rem;font-weight:500;letter-spacing:0;color:var(--ink-soft)}
+.price-hint{font-size:.72rem;color:var(--ink-soft)}
+.price-save{display:inline-block;margin-top:13px;font-size:.63rem;font-weight:700;letter-spacing:.15em;
+  padding:6px 13px;border:1px solid var(--rose);color:var(--rose);border-radius:3px}
+
+.timer-wrap{margin-top:20px;text-align:center}
+.timer-lbl{font-size:.71rem;color:var(--ink-soft);margin-bottom:9px}
+.timer{display:flex;align-items:flex-end;justify-content:center;gap:14px}
+.timer-num{font-size:1.6rem;font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--plum);font-variant-numeric:tabular-nums}
+.timer-sub{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+.timer-sep{font-weight:300;color:var(--line);font-size:1.4rem;line-height:1}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:24px;
+  padding:19px 24px;border-radius:5px;font-weight:700;font-size:.92rem;letter-spacing:.04em;
+  text-transform:uppercase;color:#fff;background:var(--rose);
+  box-shadow:0 10px 26px rgba(181,86,107,.28);position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s,background .25s}
+.btn::before{content:'';position:absolute;top:0;left:-110%;width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
+  transform:skewX(-20deg);transition:left .8s ease}
+.btn:hover{transform:translateY(-2px);background:var(--rose-deep);box-shadow:0 14px 32px rgba(181,86,107,.36)}
+.btn:hover::before{left:130%}
+.guar{text-align:center;font-size:.7rem;color:var(--ink-soft);margin-top:14px}
+
+.sec-title{font-size:clamp(1.3rem,5.5vw,1.7rem);font-weight:900;letter-spacing:-.028em;line-height:1.22;color:var(--plum)}
+
+/* ── why-method (sand) ── */
+.why{padding:54px 0;background:var(--sand)}
+.why .container{position:relative;z-index:2}
+.wm-text{margin-top:14px;color:var(--ink-soft);font-size:.88rem;line-height:1.72}
+.obj-row{display:flex;align-items:center;gap:16px;margin:22px 0 0 -24px}
+.obj-art{position:relative;flex:0 0 40%}
+.obj-art img{display:block;width:140%;max-width:none;height:auto;margin-left:-32%}
+.obj-col{flex:1;min-width:0}
+.vs-list{margin-top:22px}
+.vs-card{position:relative;padding:18px 0;border-top:1px solid var(--line)}
+.vs-card:last-of-type{border-bottom:1px solid var(--line)}
+.vs-head{display:flex;align-items:baseline;gap:10px;margin-bottom:7px}
+.vs-idx{font-size:.68rem;font-weight:700;letter-spacing:.12em;color:var(--rose);font-variant-numeric:tabular-nums}
+.vs-label{font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--plum)}
+.vs-strike{margin-left:auto;font-size:.9rem;color:var(--rose);opacity:.55}
+.vs-body{font-size:.85rem;line-height:1.66;color:var(--ink-soft)}
+.cause{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--rose);
+  border-radius:4px;padding:18px 19px;font-size:.88rem;line-height:1.74;color:var(--ink)}
+.cause strong{color:var(--rose-deep)}
+.cause .u{color:var(--rose-deep);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* ── for-who (paper) ── */
+.forwho{padding:54px 0;background:var(--paper)}
+.forwho .container{position:relative;z-index:2}
+.obj-bg{position:absolute;top:-30px;right:-15%;width:58%;z-index:0;pointer-events:none}
+.obj-bg img{display:block;width:100%;max-width:none;height:auto;
+  -webkit-mask-image:linear-gradient(215deg,#000 0 34%,rgba(0,0,0,.4) 64%,transparent 88%);
+          mask-image:linear-gradient(215deg,#000 0 34%,rgba(0,0,0,.4) 64%,transparent 88%)}
+.pain-list{margin-top:24px;display:flex;flex-direction:column}
+.pain-card{position:relative;padding:18px 0 18px 34px;border-bottom:1px dashed var(--line)}
+.pain-card:first-child{border-top:1px dashed var(--line)}
+.pain-num{position:absolute;left:0;top:19px;font-size:.7rem;font-weight:700;color:var(--rose);
+  font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.pain-card b{display:block;font-size:.9rem;font-weight:700;color:var(--plum);margin-bottom:5px;letter-spacing:-.01em}
+.pain-card span{font-size:.84rem;line-height:1.64;color:var(--ink-soft)}
+.if-you{margin-top:28px;border-radius:6px;padding:22px 20px;text-align:center;background:var(--plum);
+  color:rgba(255,255,255,.84);font-size:.86rem;line-height:1.7}
+.if-you strong{color:#f0c8cf}
+
+.slot{border:1.5px dashed var(--rose-soft);border-radius:6px;aspect-ratio:1/1;display:grid;place-items:center;
+  text-align:center;padding:10px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);
+  background:radial-gradient(circle at 50% 45%,rgba(181,86,107,.08),transparent 70%)}
+
+.tag{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:50;background:var(--plum);
+  border-radius:999px;padding:9px 17px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.tag b{color:#f0c8cf}
+@keyframes fY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes fR{0%,100%{transform:rotate(0)}50%{transform:rotate(8deg)}}
+</style>
+</head>
+<body>
+<div class="phone-wrap">
+
+<!-- ══ HERO ══ -->
+<section class="hero section" id="hero">
+  <svg style="position:absolute;right:-10px;top:6%;opacity:.5;z-index:1;animation:fY 11s ease-in-out infinite" width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+    <circle cx="60" cy="60" r="52" stroke="#e8c3cb" stroke-width="1"/>
+    <circle cx="60" cy="60" r="34" stroke="#e8c3cb" stroke-width="1" stroke-dasharray="4 5"/>
+  </svg>
+  <div class="container">
+    <div class="sticker r"><span class="live-dot"></span>Онлайн-курс · 5 днів</div>
+    <h1 class="r d1">Звільни тіло з режиму <span class="hl">фонової напруги</span> <span class="thin">— поверни собі внутрішню свободу і бажання близькості вже за 5 днів</span></h1>
+    <div class="rule r d1"></div>
+    <p class="hero-sub r d2">Відновиш контакт з тілом через дихання, позбудешся скутості через роботу з найважливішими м'язами жіночого організму та відчуєш глибоке полегшення зсередини організму</p>
+
+    <div class="spec r d2">
+      <div class="spec-row"><span class="spec-n">01</span>Без тренажерів і складних вправ</div>
+      <div class="spec-row"><span class="spec-n">02</span>Без додаткового обладнання</div>
+      <div class="spec-row"><span class="spec-n">03</span>15–20 хвилин на день</div>
+    </div>
+
+    <div class="hero-photo r d3">
+      <img src="/images/v2/hero.jpg" alt="Анастасія Максимівна — авторка методики WomenFitness" fetchpriority="high" decoding="async">
+    </div>
+    <div class="cap r d3">Анастасія Максимівна · авторка методики</div>
+
+    <div class="ticket r d3">
+      <div class="price-old">2 390 грн</div>
+      <div class="price-new">390 <small>грн</small></div>
+      <div class="price-hint">спеціальна ціна · тільки до кінця таймера</div>
+      <div class="price-save">ЕКОНОМІЯ 2 000 ГРН</div>
+    </div>
+
+    <div class="timer-wrap r d4">
+      <div class="timer-lbl">⏱ Акційна ціна діє ще</div>
+      <div class="timer">
+        <div><div class="timer-num" id="h1">00</div><div class="timer-sub">год</div></div>
+        <div class="timer-sep">/</div>
+        <div><div class="timer-num" id="m1">00</div><div class="timer-sub">хв</div></div>
+        <div class="timer-sep">/</div>
+        <div><div class="timer-num" id="s1">00</div><div class="timer-sub">сек</div></div>
+      </div>
+    </div>
+
+    <a href="#buy" class="btn r d4">Купити курс за 390 грн →</a>
+    <p class="guar r d4">🛡 Гарантія повернення 14 днів &nbsp;·&nbsp; 📱 Telegram-бот &nbsp;·&nbsp; ♾️ Доступ назавжди</p>
+  </div>
+</section>
+
+<!-- ══ WHY THIS METHOD ══ -->
+<section class="why section" id="why">
+  <div class="grid-lines"></div>
+  <div class="container">
+    <h2 class="sec-title r d1">Чому спортзал, пігулки та медитації з ютубу <span class="hl">не відновлюють контакт з тілом?</span></h2>
+
+    <div class="obj-row r d2">
+      <div class="obj-art"><div class="slot">3D-об'єкт №2<br>«причина»</div></div>
+      <div class="obj-col">
+        <p class="wm-text" style="margin-top:0">Медитації для сну, тренування, набори БАДів та пігулки — це те, що працює з симптомами, а не з причиною.</p>
+      </div>
+    </div>
+
+    <div class="vs-list">
+      <div class="vs-card r d2">
+        <div class="vs-head"><span class="vs-idx">01</span><span class="vs-label">🏋️ Спортзал</span><span class="vs-strike">✕</span></div>
+        <div class="vs-body">Дає тіло, яке виглядає красиво ззовні. Але поперек все одно ниє, тіло все затиснуте, а відчуття «я виглядаю недостатньо добре» нікуди не зникає, бо те, як тіло виглядає, і те, як воно відчувається зсередини, — це дві різні речі.</div>
+      </div>
+      <div class="vs-card r d3">
+        <div class="vs-head"><span class="vs-idx">02</span><span class="vs-label">💊 Пігулки</span><span class="vs-strike">✕</span></div>
+        <div class="vs-body">Знімають симптоми, поки ти їх п'єш. Як тільки перестанеш пити — все повертається.</div>
+      </div>
+      <div class="vs-card r d3">
+        <div class="vs-head"><span class="vs-idx">03</span><span class="vs-label">🧘 Медитація</span><span class="vs-strike">✕</span></div>
+        <div class="vs-body">Працює як ефект плацебо — насправді ти даєш собі команду розслаблятись, а не дійсно робиш це.</div>
+      </div>
+    </div>
+
+    <p class="cause r d4">В жіночому тілі є <strong>м'язи тазового дна</strong> — вони роками не отримували правильних сигналів і поступово «вимкнулись». Поки не почнеш працювати з ними, будь-яке полегшення залишатиметься <span class="u">тимчасовим</span>.</p>
+  </div>
+</section>
+
+<!-- ══ FOR WHO ══ -->
+<section class="forwho section" id="forwho">
+  <div class="obj-bg"><div class="slot">3D-об'єкт №3<br>«вузол напруги»</div></div>
+  <div class="container">
+    <h2 class="sec-title r d1">Впізнаєш себе <span class="hl">хоча б в одному з пунктів</span>?</h2>
+    <div class="pain-list">
+      <div class="pain-card r d1"><span class="pain-num">01</span><b>🔒 Тіло скуте, поперек ниє, таз «замкнений»</b><span>Навіть коли ти намагаєшся розслабитись, тіло не відпускає напругу. І ця напруга завжди з тобою — на роботі, на йозі, на зустрічі з подругою, у ліжку, і все це без видимої причини.</span></div>
+      <div class="pain-card r d2"><span class="pain-num">02</span><b>😴 Прокидаєшся втомленою навіть після 8 годин сну</b><span>Лягаєш до 12, спиш 8 годин, а зранку важко підняти себе з ліжка. Ніби не відпочивала, а розвантажувала вагони.</span></div>
+      <div class="pain-card r d3"><span class="pain-num">03</span><b>🤰 Живіт не йде, незважаючи на правильне харчування</b><span>Раціон під контролем, тренування регулярні, але живіт залишається на місці. Здуття та «живіт як на 7 місяці вагітності» — твої постійні супутники.</span></div>
+      <div class="pain-card r d4"><span class="pain-num">04</span><b>💔 Лібідо на 0, близькість з партнером для галочки, а не через бажання</b><span>Близькість відчувається як обов'язок, а не як задоволення. Нова білизна, аромасвічки, різноманітність у позах не допомагають. Відчуваєш психологічний та фізичний дискомфорт під час близькості.</span></div>
+    </div>
+    <div class="if-you r d5">Якщо впізнала себе хоча б в одному з пунктів — це <strong>не вирок, не норма, і не «вікове»</strong>. Так тіло сигналізує про слабкі м'язи тазового дна. І це можна виправити <strong>швидко, недорого та безболісно, всього за тиждень.</strong></div>
+  </div>
+</section>
+
+</div>
+<div class="tag"><b>B</b> · Quiet Clinic</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.r');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('v')}); }
+  setTimeout(function(){els.forEach(function(el){el.classList.add('v')})},900);
+  var key='wf_timer_end',end=+sessionStorage.getItem(key);
+  if(!end||Date.now()>end){end=Date.now()+(11*3600+47*60)*1000;sessionStorage.setItem(key,end)}
+  function tick(){
+    var d=Math.max(0,end-Date.now());
+    var h=String(Math.floor(d/3600000)).padStart(2,'0');d%=3600000;
+    var m=String(Math.floor(d/60000)).padStart(2,'0');d%=60000;
+    var s=String(Math.floor(d/1000)).padStart(2,'0');
+    var e;
+    if(e=document.getElementById('h1'))e.textContent=h;
+    if(e=document.getElementById('m1'))e.textContent=m;
+    if(e=document.getElementById('s1'))e.textContent=s;
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>

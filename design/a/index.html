@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Варіант A · Aurora Silk — WomenFitness</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/images/v2/hero.jpg" fetchpriority="high">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --font:'Jost',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --ink:#170b28; --ink2:#20103a; --ink3:#2b1750;
+  --violet:#a878e8; --violet-deep:#7a4fd0;
+  --rose:#f0709f; --gold:#f0c9a0;
+  --blush:#f7eef1; --blush2:#fdf7f8;
+  --line:rgba(255,255,255,.14);
+  --muted:rgba(255,255,255,.66);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:#0d0616;color:#fff;line-height:1.65;font-size:.9rem}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.phone-wrap{max-width:480px;margin:0 auto;position:relative;background:var(--ink);overflow:clip}
+@media(min-width:520px){.phone-wrap{box-shadow:0 0 70px rgba(0,0,0,.35)}}
+.container{padding:0 22px}
+.section{position:relative;overflow:hidden}
+
+/* ── aurora backdrops ── */
+.aurora{position:absolute;inset:-10% -30% auto -30%;height:120%;pointer-events:none;z-index:0}
+.aurora i{position:absolute;display:block;border-radius:50%;filter:blur(58px);opacity:.55}
+.a1{width:74%;height:38%;left:-8%;top:2%;background:radial-gradient(circle,#7a4fd0,transparent 68%)}
+.a2{width:64%;height:32%;right:-10%;top:26%;background:radial-gradient(circle,#f0709f,transparent 66%);opacity:.4}
+.a3{width:86%;height:40%;left:-6%;bottom:-6%;background:radial-gradient(circle,#4c2a92,transparent 70%)}
+
+/* ── reveal ── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.r.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* ── hero ── */
+.hero{padding:26px 0 46px;background:linear-gradient(175deg,#20103a 0%,#170b28 58%,#150a26 100%)}
+.hero .container{position:relative;z-index:2}
+.sticker{display:inline-flex;align-items:center;gap:8px;transform:rotate(-2.2deg);
+  background:linear-gradient(100deg,var(--rose),#c65fd4);color:#fff;
+  font-size:.66rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;
+  padding:8px 15px;border-radius:8px;box-shadow:0 10px 26px rgba(240,112,159,.35);margin-bottom:20px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulseDot 2s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+
+h1{font-size:clamp(1.72rem,7.4vw,2.3rem);font-weight:900;letter-spacing:-.028em;line-height:1.12;
+  text-shadow:0 0 44px rgba(168,120,232,.3)}
+.hl{position:relative;white-space:normal;
+  background:linear-gradient(180deg,transparent 62%,rgba(240,112,159,.42) 62%);
+  padding:0 4px;margin:0 -4px}
+.hero-sub{margin-top:16px;color:var(--muted);font-size:.9rem;line-height:1.68;font-weight:300}
+
+.pill-row{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.pill{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);backdrop-filter:blur(8px);
+  border-radius:999px;padding:8px 15px;font-size:.78rem;color:rgba(255,255,255,.86)}
+.pill-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex:0 0 auto}
+
+.hero-photo{position:relative;margin-top:26px}
+.hero-photo::before{content:'';position:absolute;inset:-9px -9px -9px 12px;border-radius:30px;
+  background:linear-gradient(140deg,rgba(240,112,159,.55),rgba(168,120,232,.15) 55%,transparent);
+  filter:blur(1px);animation:sway 9s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(1.4deg)}50%{transform:rotate(2.6deg) translateY(-4px)}}
+.hero-photo img{position:relative;z-index:1;display:block;width:100%;border-radius:26px;
+  box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.photo-chip{position:absolute;z-index:2;background:rgba(23,11,40,.72);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:16px;padding:10px 13px;
+  box-shadow:0 14px 30px rgba(0,0,0,.4);animation:ofloat 6.5s ease-in-out infinite}
+.photo-chip b{display:block;font-size:1rem;font-weight:900;letter-spacing:-.02em;line-height:1}
+.photo-chip span{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chip-1{left:-6px;bottom:16%}
+.chip-2{right:-4px;top:12%;animation-delay:-3s}
+@keyframes ofloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+.price-block{margin-top:28px;position:relative;text-align:center;
+  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+  border:1px solid var(--line);border-radius:22px;padding:22px 18px 20px;backdrop-filter:blur(10px)}
+.price-block::before,.price-block::after{content:'';position:absolute;top:50%;width:20px;height:20px;
+  border-radius:50%;background:var(--ink);transform:translateY(-50%)}
+.price-block::before{left:-11px}.price-block::after{right:-11px}
+.price-old{font-size:.86rem;color:rgba(255,255,255,.42);text-decoration:line-through}
+.price-new{font-size:2.9rem;font-weight:900;letter-spacing:-.04em;line-height:1;margin:2px 0 6px;
+  color:#fff}
+.price-new small{font-size:1rem;font-weight:600;letter-spacing:0}
+.price-hint{font-size:.72rem;color:var(--muted)}
+.price-save{display:inline-block;margin-top:12px;font-size:.64rem;font-weight:700;letter-spacing:.14em;
+  padding:6px 13px;border-radius:999px;color:#ffe0ea;background:rgba(240,112,159,.28);border:1px solid rgba(240,112,159,.5)}
+
+.timer-wrap{margin-top:18px;text-align:center}
+.timer-lbl{font-size:.72rem;color:var(--muted);margin-bottom:9px}
+.timer{display:flex;align-items:center;justify-content:center;gap:8px}
+.timer-unit{min-width:60px;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:14px;padding:9px 4px}
+.timer-num{font-size:1.4rem;font-weight:900;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.timer-sub{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.timer-sep{opacity:.4;font-weight:700}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;
+  padding:19px 24px;border-radius:17px;font-weight:700;font-size:.95rem;letter-spacing:.02em;
+  color:#fff;background:linear-gradient(100deg,var(--rose),#a95fd8 70%,var(--violet-deep));
+  box-shadow:0 14px 36px rgba(240,112,159,.36),inset 0 1px 0 rgba(255,255,255,.22);
+  position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn::before{content:'';position:absolute;top:0;left:-110%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:skewX(-20deg);transition:left .8s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(240,112,159,.5)}
+.btn:hover::before{left:130%}
+.guar{text-align:center;font-size:.7rem;color:rgba(255,255,255,.34);margin-top:13px}
+
+/* ── section titles ── */
+.sec-title{font-size:clamp(1.32rem,5.6vw,1.72rem);font-weight:900;letter-spacing:-.024em;line-height:1.2;
+  text-shadow:0 0 36px rgba(168,120,232,.24)}
+.sec-title.on-light{text-shadow:0 4px 22px rgba(43,23,80,.12)}
+.on-light .hl,.sec-title.on-light .hl{background:linear-gradient(180deg,transparent 62%,rgba(240,112,159,.4) 62%)}
+
+/* ── why-method ── */
+.why{padding:52px 0;background:linear-gradient(190deg,#150a26,#20103a 70%)}
+.why .container{position:relative;z-index:2}
+.wm-text{margin-top:14px;color:var(--muted);font-size:.88rem;line-height:1.7}
+.obj-row{display:flex;align-items:center;gap:16px;margin:22px 0 4px -22px}
+.obj-art{position:relative;flex:0 0 40%}
+.obj-art img{display:block;width:140%;max-width:none;height:auto;margin-left:-32%}
+.obj-col{flex:1;min-width:0}
+.vs-list{margin-top:20px;display:flex;flex-direction:column;gap:11px}
+.vs-card{position:relative;background:rgba(255,255,255,.055);border:1px solid var(--line);
+  border-radius:19px;padding:16px 17px 16px 17px;backdrop-filter:blur(9px)}
+.vs-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.vs-emoji{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;font-size:1rem;
+  background:linear-gradient(150deg,rgba(240,112,159,.28),rgba(168,120,232,.18));border:1px solid var(--line);flex:0 0 auto}
+.vs-label{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#fff}
+.vs-body{font-size:.85rem;line-height:1.62;color:rgba(255,255,255,.8)}
+.cause{margin-top:18px;position:relative;padding:18px 18px 18px 20px;border-radius:19px;
+  background:linear-gradient(140deg,rgba(240,112,159,.16),rgba(122,79,208,.12));
+  border:1px solid rgba(240,112,159,.3);font-size:.88rem;line-height:1.72;color:rgba(255,255,255,.9)}
+.cause strong{color:var(--gold)}
+.cause .u{color:var(--rose);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* ── for-who (light) ── */
+.forwho{padding:52px 0;background:linear-gradient(180deg,var(--blush2),var(--blush));color:var(--ink)}
+.forwho .container{position:relative;z-index:2}
+.forwho .sec-title{color:var(--ink3)}
+.obj-bg{position:absolute;top:-40px;right:-16%;width:60%;z-index:0;pointer-events:none;opacity:.9}
+.obj-bg img{display:block;width:100%;max-width:none;height:auto;
+  -webkit-mask-image:linear-gradient(215deg,#000 0 34%,rgba(0,0,0,.4) 64%,transparent 88%);
+          mask-image:linear-gradient(215deg,#000 0 34%,rgba(0,0,0,.4) 64%,transparent 88%)}
+.pain-list{margin-top:22px;display:flex;flex-direction:column;gap:11px}
+.pain-card{position:relative;background:rgba(255,255,255,.86);backdrop-filter:blur(7px);
+  border:1px solid rgba(43,23,80,.08);border-radius:18px;padding:16px 17px 16px 19px;
+  box-shadow:0 8px 26px rgba(43,23,80,.06)}
+.pain-card::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;
+  background:linear-gradient(180deg,var(--rose),var(--violet))}
+.pain-card b{display:block;font-size:.9rem;font-weight:700;color:var(--ink3);margin-bottom:5px;letter-spacing:-.01em}
+.pain-card span{font-size:.84rem;line-height:1.6;color:rgba(43,23,80,.72)}
+.if-you{margin-top:24px;border-radius:22px;padding:20px 20px;text-align:center;
+  background:linear-gradient(150deg,var(--ink3),var(--ink));color:rgba(255,255,255,.82);
+  font-size:.86rem;line-height:1.68;box-shadow:0 20px 44px rgba(43,23,80,.22)}
+.if-you strong{color:var(--gold)}
+
+/* ── object placeholder ── */
+.slot{border:1.5px dashed rgba(240,112,159,.55);border-radius:20px;aspect-ratio:1/1;
+  display:grid;place-items:center;text-align:center;padding:10px;
+  font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,112,159,.85);
+  background:radial-gradient(circle at 50% 45%,rgba(240,112,159,.12),transparent 70%)}
+.slot.on-light{border-color:rgba(122,79,208,.4);color:rgba(122,79,208,.75);
+  background:radial-gradient(circle at 50% 45%,rgba(122,79,208,.09),transparent 70%)}
+
+/* ── variant tag ── */
+.tag{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:50;
+  background:rgba(23,11,40,.86);backdrop-filter:blur(10px);border:1px solid var(--line);
+  border-radius:999px;padding:9px 17px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.tag b{color:var(--rose)}
+@keyframes fY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes fR{0%,100%{transform:rotate(0)}50%{transform:rotate(9deg)}}
+</style>
+</head>
+<body>
+<div class="phone-wrap">
+
+<!-- ══ HERO ══ -->
+<section class="hero section" id="hero">
+  <div class="aurora"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+  <svg style="position:absolute;right:12px;top:9%;opacity:.14;z-index:1;animation:fY 10s ease-in-out infinite" width="58" height="82" viewBox="0 0 56 80" fill="none" aria-hidden="true">
+    <ellipse cx="28" cy="40" rx="18" ry="32" stroke="#f0709f" stroke-width="1.5" fill="none"/>
+    <ellipse cx="28" cy="40" rx="9" ry="16" stroke="#f0709f" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+  </svg>
+  <div class="container">
+    <div class="sticker r"><span class="live-dot"></span>Онлайн-курс · 5 днів</div>
+    <h1 class="r d1">Звільни тіло з режиму <span class="hl">фонової напруги</span> — поверни собі внутрішню свободу і бажання близькості вже за 5 днів</h1>
+    <p class="hero-sub r d2">Відновиш контакт з тілом через дихання, позбудешся скутості через роботу з найважливішими м'язами жіночого організму та відчуєш глибоке полегшення зсередини організму</p>
+
+    <div class="pill-row r d2">
+      <div class="pill"><span class="pill-dot"></span>Без тренажерів і складних вправ</div>
+      <div class="pill"><span class="pill-dot"></span>Без додаткового обладнання</div>
+      <div class="pill"><span class="pill-dot"></span>15–20 хвилин на день</div>
+    </div>
+
+    <div class="hero-photo r d2">
+      <img src="/images/v2/hero.jpg" alt="Анастасія Максимівна — авторка методики WomenFitness" fetchpriority="high" decoding="async">
+      <div class="photo-chip chip-1"><b>15–20</b><span>хвилин</span></div>
+      <div class="photo-chip chip-2"><b>4</b><span>уроки</span></div>
+    </div>
+
+    <div class="price-block r d3">
+      <div class="price-old">2 390 грн</div>
+      <div class="price-new">390 <small>грн</small></div>
+      <div class="price-hint">спеціальна ціна · тільки до кінця таймера</div>
+      <div class="price-save">ЕКОНОМІЯ 2 000 ГРН</div>
+    </div>
+
+    <div class="timer-wrap r d3">
+      <div class="timer-lbl">⏱ Акційна ціна діє ще</div>
+      <div class="timer">
+        <div class="timer-unit"><div class="timer-num" id="h1">00</div><div class="timer-sub">год</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="m1">00</div><div class="timer-sub">хв</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="s1">00</div><div class="timer-sub">сек</div></div>
+      </div>
+    </div>
+
+    <a href="#buy" class="btn r d4">Купити курс за 390 грн →</a>
+    <p class="guar r d4">🛡 Гарантія повернення 14 днів &nbsp;·&nbsp; 📱 Telegram-бот &nbsp;·&nbsp; ♾️ Доступ назавжди</p>
+  </div>
+</section>
+
+<!-- ══ WHY THIS METHOD ══ -->
+<section class="why section" id="why">
+  <div class="aurora" style="opacity:.5"><i class="a2" style="top:8%"></i><i class="a3"></i></div>
+  <svg style="position:absolute;left:8px;bottom:12%;opacity:.1;z-index:1;animation:fR 14s ease-in-out infinite" width="52" height="52" viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="24" cy="24" r="19" stroke="#a878e8" stroke-width="1.5" fill="none"/>
+    <circle cx="24" cy="24" r="11" stroke="#a878e8" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+  </svg>
+  <div class="container">
+    <h2 class="sec-title r d1">Чому спортзал, пігулки та медитації з ютубу <span class="hl">не відновлюють контакт з тілом?</span></h2>
+
+    <div class="obj-row r d2">
+      <div class="obj-art"><div class="slot">3D-об'єкт №2<br>«причина»</div></div>
+      <div class="obj-col">
+        <p class="wm-text" style="margin-top:0">Медитації для сну, тренування, набори БАДів та пігулки — це те, що працює з симптомами, а не з причиною.</p>
+      </div>
+    </div>
+
+    <div class="vs-list">
+      <div class="vs-card r d2">
+        <div class="vs-head"><div class="vs-emoji">🏋️</div><div class="vs-label">Спортзал</div></div>
+        <div class="vs-body">Дає тіло, яке виглядає красиво ззовні. Але поперек все одно ниє, тіло все затиснуте, а відчуття «я виглядаю недостатньо добре» нікуди не зникає, бо те, як тіло виглядає, і те, як воно відчувається зсередини, — це дві різні речі.</div>
+      </div>
+      <div class="vs-card r d3">
+        <div class="vs-head"><div class="vs-emoji">💊</div><div class="vs-label">Пігулки</div></div>
+        <div class="vs-body">Знімають симптоми, поки ти їх п'єш. Як тільки перестанеш пити — все повертається.</div>
+      </div>
+      <div class="vs-card r d3">
+        <div class="vs-head"><div class="vs-emoji">🧘</div><div class="vs-label">Медитація</div></div>
+        <div class="vs-body">Працює як ефект плацебо — насправді ти даєш собі команду розслаблятись, а не дійсно робиш це.</div>
+      </div>
+    </div>
+
+    <p class="cause r d4">В жіночому тілі є <strong>м'язи тазового дна</strong> — вони роками не отримували правильних сигналів і поступово «вимкнулись». Поки не почнеш працювати з ними, будь-яке полегшення залишатиметься <span class="u">тимчасовим</span>.</p>
+  </div>
+</section>
+
+<!-- ══ FOR WHO ══ -->
+<section class="forwho section" id="forwho">
+  <div class="obj-bg"><div class="slot on-light" style="aspect-ratio:1/1">3D-об'єкт №3<br>«вузол напруги»</div></div>
+  <div class="container">
+    <h2 class="sec-title on-light r d1">Впізнаєш себе <span class="hl">хоча б в одному з пунктів</span>?</h2>
+    <div class="pain-list">
+      <div class="pain-card r d1"><b>🔒 Тіло скуте, поперек ниє, таз «замкнений»</b><span>Навіть коли ти намагаєшся розслабитись, тіло не відпускає напругу. І ця напруга завжди з тобою — на роботі, на йозі, на зустрічі з подругою, у ліжку, і все це без видимої причини.</span></div>
+      <div class="pain-card r d2"><b>😴 Прокидаєшся втомленою навіть після 8 годин сну</b><span>Лягаєш до 12, спиш 8 годин, а зранку важко підняти себе з ліжка. Ніби не відпочивала, а розвантажувала вагони.</span></div>
+      <div class="pain-card r d3"><b>🤰 Живіт не йде, незважаючи на правильне харчування</b><span>Раціон під контролем, тренування регулярні, але живіт залишається на місці. Здуття та «живіт як на 7 місяці вагітності» — твої постійні супутники.</span></div>
+      <div class="pain-card r d4"><b>💔 Лібідо на 0, близькість з партнером для галочки, а не через бажання</b><span>Близькість відчувається як обов'язок, а не як задоволення. Нова білизна, аромасвічки, різноманітність у позах не допомагають. Відчуваєш психологічний та фізичний дискомфорт під час близькості.</span></div>
+    </div>
+    <div class="if-you r d5">Якщо впізнала себе хоча б в одному з пунктів — це <strong>не вирок, не норма, і не «вікове»</strong>. Так тіло сигналізує про слабкі м'язи тазового дна. І це можна виправити <strong>швидко, недорого та безболісно, всього за тиждень.</strong></div>
+  </div>
+</section>
+
+</div>
+<div class="tag"><b>A</b> · Aurora Silk</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.r');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('v')}); }
+  setTimeout(function(){els.forEach(function(el){el.classList.add('v')})},900);
+  var key='wf_timer_end',end=+sessionStorage.getItem(key);
+  if(!end||Date.now()>end){end=Date.now()+(11*3600+47*60)*1000;sessionStorage.setItem(key,end)}
+  function tick(){
+    var d=Math.max(0,end-Date.now());
+    var h=String(Math.floor(d/3600000)).padStart(2,'0');d%=3600000;
+    var m=String(Math.floor(d/60000)).padStart(2,'0');d%=60000;
+    var s=String(Math.floor(d/1000)).padStart(2,'0');
+    var e;
+    if(e=document.getElementById('h1'))e.textContent=h;
+    if(e=document.getElementById('m1'))e.textContent=m;
+    if(e=document.getElementById('s1'))e.textContent=s;
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
