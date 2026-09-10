@@ -304,8 +304,10 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
   background:#fff;border:1px solid rgba(43,23,80,.1);color:var(--ink3);font-size:1.1rem;
   box-shadow:0 6px 16px rgba(43,23,80,.1)}
 .rv-dots{display:flex;gap:7px}
-.rv-dot{width:8px;height:8px;border-radius:50%;background:rgba(43,23,80,.2);transition:background .3s,width .3s}
-.rv-dot.active{background:var(--rose);width:22px;border-radius:999px}
+.rv-dot{width:22px;height:8px;border-radius:999px;background:rgba(43,23,80,.2);
+  transform:scaleX(.364);transform-origin:center;transition:background .3s,transform .3s}
+.rv-dot.active{background:var(--rose);transform:scaleX(1)}
+.rv-dots{gap:2px}
 
 /* ═══════ guarantee ═══════ */
 .g-card{margin-top:16px;padding:20px;border-radius:22px;background:#fff;
@@ -343,6 +345,15 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
 .faq-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.8,.2,1)}
 .faq-item.open .faq-body{max-height:600px}
 .faq-a{padding:0 18px 18px;font-size:.98rem;line-height:1.65;color:rgba(43,23,80,.75)}
+
+/* accordions: animate grid rows instead of max-height where supported */
+@supports (grid-template-rows: 0fr){
+  .reason-body,.lc-body,.faq-body{display:grid;max-height:none;
+    grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
+  .lc-body{transition-duration:.5s}
+  .reason-body>.acc-in,.lc-body>.acc-in,.faq-body>.acc-in{overflow:hidden}
+  .reason.open .reason-body,.lc.open .lc-body,.faq-item.open .faq-body{grid-template-rows:1fr}
+}
 
 /* ═══════ final + footer ═══════ */
 .final{text-align:center}
@@ -484,25 +495,25 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
       <div class="reason-head"><div class="reason-num">01</div>
         <div class="reason-title">Системно працюємо з м'язами, які не «качає» жоден тренажер</div>
         <div class="reason-tog">+</div></div>
-      <div class="reason-body"><div class="reason-text">М'язи тазового дна — це внутрішній «гамак», який має прямий вплив на болі в попереку, скутість тазу, поставу та чутливість, тримає органи малого тазу та контролює сечовипускання. Жодна силова вправа не дістає до них.</div></div>
+      <div class="reason-body"><div class="acc-in"><div class="reason-text">М'язи тазового дна — це внутрішній «гамак», який має прямий вплив на болі в попереку, скутість тазу, поставу та чутливість, тримає органи малого тазу та контролює сечовипускання. Жодна силова вправа не дістає до них.</div></div></div>
     </div>
     <div class="reason r d2" onclick="toggleReason(this)">
       <div class="reason-head"><div class="reason-num">02</div>
         <div class="reason-title">Зв'язка «дихання + рух» включає глибокі м'язи</div>
         <div class="reason-tog">+</div></div>
-      <div class="reason-body"><div class="reason-text">Згідно останніх досліджень 90% жінок не відчувають своє тазове дно — і тому будь-які «вправи Кегеля з ютуба» не дають результату. За цією методикою ти спершу вчишся відчувати, потім — керувати. Кожен крок будується на попередньому — це сходи, а не набір випадкових вправ.</div></div>
+      <div class="reason-body"><div class="acc-in"><div class="reason-text">Згідно останніх досліджень 90% жінок не відчувають своє тазове дно — і тому будь-які «вправи Кегеля з ютуба» не дають результату. За цією методикою ти спершу вчишся відчувати, потім — керувати. Кожен крок будується на попередньому — це сходи, а не набір випадкових вправ.</div></div></div>
     </div>
     <div class="reason r d3" onclick="toggleReason(this)">
       <div class="reason-head"><div class="reason-num">03</div>
         <div class="reason-title">Безпечно і підходить для будь-якого рівня підготовки</div>
         <div class="reason-tog">+</div></div>
-      <div class="reason-body"><div class="reason-text">Вага, вік, наявність дітей, гнучкість, пластичність, силові показники — все це не має абсолютно ніякого значення. Тіло відповідає завжди — це фізіологія. Все, що потрібно — рухатись поступово та саме за цією схемою.</div></div>
+      <div class="reason-body"><div class="acc-in"><div class="reason-text">Вага, вік, наявність дітей, гнучкість, пластичність, силові показники — все це не має абсолютно ніякого значення. Тіло відповідає завжди — це фізіологія. Все, що потрібно — рухатись поступово та саме за цією схемою.</div></div></div>
     </div>
     <div class="reason r d4" onclick="toggleReason(this)">
       <div class="reason-head"><div class="reason-num">04</div>
         <div class="reason-title">Особистий комфорт</div>
         <div class="reason-tog">+</div></div>
-      <div class="reason-body"><div class="reason-text">Усі уроки в записі, займаєшся у своєму темпі, коли зручно — більше не треба витрачати час на дорогу. Ніхто не дивиться на тебе та не оцінює. Ти сфокусована на власному тілі і не відволікаєшся на «гімнастку» з сусіднього килимка.</div></div>
+      <div class="reason-body"><div class="acc-in"><div class="reason-text">Усі уроки в записі, займаєшся у своєму темпі, коли зручно — більше не треба витрачати час на дорогу. Ніхто не дивиться на тебе та не оцінює. Ти сфокусована на власному тілі і не відволікаєшся на «гімнастку» з сусіднього килимка.</div></div></div>
     </div>
   </div>
 </section>
@@ -522,14 +533,13 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
         <div class="lc-num">01</div>
         <div class="lc-ttl">Як за допомогою трьох технік дихання усього за 15хв:</div>
         <button class="lc-tog" aria-label="Показати деталі">+</button></div>
-      <div class="lc-body"><div class="lc-inner">
+      <div class="lc-body"><div class="acc-in"><div class="lc-inner">
         <ul class="lc-list">
           <li>зупинити поверхневе дихання, яке тримає нервову систему в режимі загрози</li>
           <li>прибрати фонову напругу в грудях, животі і тазу</li>
           <li>зняти «дерев'яність» в тілі, яка не минає навіть після 8-годинного сну</li>
         </ul>
-        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> опануєш грудне, діафрагмальне і хвильове дихання — інструмент, який вимикає стрес за лічені хвилини, без пігулок та психолога.</p></div>
-      </div></div>
+        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> опануєш грудне, діафрагмальне і хвильове дихання — інструмент, який вимикає стрес за лічені хвилини, без пігулок та психолога.</p></div></div></div></div>
     </div>
 
     <div class="lc r d2">
@@ -539,14 +549,13 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
         <div class="lc-num">02</div>
         <div class="lc-ttl">Як вперше по-справжньому відчути м'язи тазового дна</div>
         <button class="lc-tog" aria-label="Показати деталі">+</button></div>
-      <div class="lc-body"><div class="lc-inner">
+      <div class="lc-body"><div class="acc-in"><div class="lc-inner">
         <ul class="lc-list">
           <li>дізнаєшся чому одні жінки не можуть напружити м'язи, а інші розслабити — і до якого типу належиш ти</li>
           <li>дві точкові вправи, після яких ти точно знатимеш де ці м'язи і як з ними працювати</li>
           <li>навчишся направляти увагу саме туди, де потрібна робота</li>
         </ul>
-        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> відчуєш, як напружуються і розслабляються м'язи тазового дна — можливо вперше в житті.</p></div>
-      </div></div>
+        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> відчуєш, як напружуються і розслабляються м'язи тазового дна — можливо вперше в житті.</p></div></div></div></div>
     </div>
 
     <div class="lc r d3">
@@ -556,14 +565,13 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
         <div class="lc-num">03</div>
         <div class="lc-ttl">Повноцінне тренування м'язів тазового дна в режимі follow me</div>
         <button class="lc-tog" aria-label="Показати деталі">+</button></div>
-      <div class="lc-body"><div class="lc-inner">
+      <div class="lc-body"><div class="acc-in"><div class="lc-inner">
         <ul class="lc-list">
           <li>9 вправ без додаткового обладнання — лише твоє тіло та килимок або навіть рушник</li>
           <li>робота з м'язами у трьох положеннях для максимального результату</li>
           <li>пропрацювання вправ в різній швидкості — імітація того, як м'язи мають реагувати в реальному житті</li>
         </ul>
-        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> отримаєш чіткий план, який покращить відчуття під час близькості та сприяє швидкому відновленню після пологів.</p></div>
-      </div></div>
+        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> отримаєш чіткий план, який покращить відчуття під час близькості та сприяє швидкому відновленню після пологів.</p></div></div></div></div>
     </div>
 
     <div class="lc r d4">
@@ -573,14 +581,13 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
         <div class="lc-num">04</div>
         <div class="lc-ttl">Як звільнити тіло від напруги, яку не знімають ні сон, ні йога, ні медитації</div>
         <button class="lc-tog" aria-label="Показати деталі">+</button></div>
-      <div class="lc-body"><div class="lc-inner">
+      <div class="lc-body"><div class="acc-in"><div class="lc-inner">
         <ul class="lc-list">
           <li>опанування техніки шейкінгу</li>
           <li>повне відновлення контролю над тілом через рух</li>
           <li>поєднання двох важливих станів — задоволення та контролю</li>
         </ul>
-        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> виведеш тіло з режиму автопілоту, відчуєш себе вільною у своєму тілі — можливо вперше за довгий час.</p></div>
-      </div></div>
+        <div class="lc-res"><span class="lc-res-ico">🎯</span><p class="lc-res-txt"><strong>Результат:</strong> виведеш тіло з режиму автопілоту, відчуєш себе вільною у своєму тілі — можливо вперше за довгий час.</p></div></div></div></div>
     </div>
   </div>
 </section>
@@ -754,25 +761,25 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
   <div class="container">
     <h2 class="sec-title on-light r d1">Часті <span class="hl">запитання</span></h2>
     <div class="faq-item r d1"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Мені за 40 / 50 — це вже пізно?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Ні. М'язи тазового дна реагують на правильну роботу в будь-якому віці. Моїй найстаршій учениці 63 роки і вона народила трьох. Чим раніше — тим легше, але «пізно» не буває.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Ні. М'язи тазового дна реагують на правильну роботу в будь-якому віці. Моїй найстаршій учениці 63 роки і вона народила трьох. Чим раніше — тим легше, але «пізно» не буває.</p></div></div></div>
     <div class="faq-item r d1"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Я ніколи не займалась нічим подібним. Розберусь?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Так. Курс побудований саме для тих, хто починає з нуля. Перші 2 уроки — знайомство з власним тілом. Жодний попередній досвід не потрібен.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Так. Курс побудований саме для тих, хто починає з нуля. Перші 2 уроки — знайомство з власним тілом. Жодний попередній досвід не потрібен.</p></div></div></div>
     <div class="faq-item r d2"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Скільки часу займає? У мене троє дітей і робота.</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">15–20 хвилин на день. Це менше, ніж ти витрачаєш на те, щоб «прийти до тями» після пробудження. Вправи можна робити поки готується сніданок, замість бездумного скролінгу, навіть перед сном у ліжку.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">15–20 хвилин на день. Це менше, ніж ти витрачаєш на те, щоб «прийти до тями» після пробудження. Вправи можна робити поки готується сніданок, замість бездумного скролінгу, навіть перед сном у ліжку.</p></div></div></div>
     <div class="faq-item r d2"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Я після пологів. Можна мені?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Так, якщо пологи були більш ніж 6–8 тижнів тому і немає медичних обмежень — можна сміливо починати. Курс саме і створений для післяпологового відновлення.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Так, якщо пологи були більш ніж 6–8 тижнів тому і немає медичних обмежень — можна сміливо починати. Курс саме і створений для післяпологового відновлення.</p></div></div></div>
     <div class="faq-item r d3"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">У мене вже є опущення / нетримання / болі. Не нашкодить?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Ні. Методика побудована від м'якого до сильного — спочатку ти вчишся відчувати м'язи, далі керувати ними, і тільки потім — працюєш на силу. У чаті можна обговорити свій випадок особисто.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Ні. Методика побудована від м'якого до сильного — спочатку ти вчишся відчувати м'язи, далі керувати ними, і тільки потім — працюєш на силу. У чаті можна обговорити свій випадок особисто.</p></div></div></div>
     <div class="faq-item r d3"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Чи потрібні тренажери, гантелі, килимок?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Ні. Все, що тобі потрібно — це твоє тіло і 15–20 хвилин часу. Можеш робити навіть у ліжку.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Ні. Все, що тобі потрібно — це твоє тіло і 15–20 хвилин часу. Можеш робити навіть у ліжку.</p></div></div></div>
     <div class="faq-item r d3"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Коли побачу перший результат?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Зміни будуть відчутні вже після першого заняття.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Зміни будуть відчутні вже після першого заняття.</p></div></div></div>
     <div class="faq-item r d4"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Як я отримаю доступ після оплати?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Одразу після оплати тебе автоматично переадресують у Telegram-бот. Натискаєш «Старт» — і всі уроки відкриваються. Доступ лишається назавжди.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Одразу після оплати тебе автоматично переадресують у Telegram-бот. Натискаєш «Старт» — і всі уроки відкриваються. Доступ лишається назавжди.</p></div></div></div>
     <div class="faq-item r d4"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Чому так дешево? У чому підступ?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Жодного підступу. Це акційна ціна для жінок, які купують зараз. Після закінчення таймеру курс продається за повну ціну 2 390 грн. Це не «вічна знижка» — це чесне обмеження за часом.</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Жодного підступу. Це акційна ціна для жінок, які купують зараз. Після закінчення таймеру курс продається за повну ціну 2 390 грн. Це не «вічна знижка» — це чесне обмеження за часом.</p></div></div></div>
     <div class="faq-item r d4"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Як працює гарантія повернення коштів?</span><span class="faq-icon">+</span></button>
-      <div class="faq-body"><p class="faq-a">Просто пишеш Анастасії в чат підтримки протягом 14 днів — і кошти повертаються повністю, без анкет і «доказів».</p></div></div>
+      <div class="faq-body"><div class="acc-in"><p class="faq-a">Просто пишеш Анастасії в чат підтримки протягом 14 днів — і кошти повертаються повністю, без анкет і «доказів».</p></div></div></div>
   </div>
 </section>
 
