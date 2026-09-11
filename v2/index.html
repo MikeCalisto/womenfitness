@@ -86,16 +86,12 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
 .hl-warm{color:var(--gold);font-weight:600}
 .hero-sub{margin-top:18px;color:var(--muted);font-size:1.06rem;line-height:1.65;font-weight:300}
 
-.hero-mid{position:relative;margin-top:24px;min-height:150px}
-.pill-row{display:flex;flex-direction:column;gap:10px;width:68%;min-width:0}
+.hero-mid{margin-top:24px}
+.pill-row{display:flex;flex-direction:column;gap:10px}
 .pill{display:inline-flex;align-items:center;gap:10px;
   background:rgba(255,255,255,.07);border:1px solid var(--line);backdrop-filter:blur(8px);
   border-radius:16px;padding:11px 15px;font-size:.94rem;line-height:1.35;color:rgba(255,255,255,.9)}
 .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:0 0 auto}
-.hero-obj{position:absolute;right:-8%;bottom:-52px;z-index:1;pointer-events:none}
-.hero-obj img{display:block;width:auto;max-width:none;height:380px;
-  filter:drop-shadow(0 18px 34px rgba(0,0,0,.5));animation:ofloat 8s ease-in-out infinite}
-@media(max-width:400px){.hero-obj img{height:330px}}
 @keyframes ofloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
 
 .hero-photo{position:relative;margin-top:28px}
@@ -104,6 +100,7 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
   filter:blur(1px);animation:sway 9s ease-in-out infinite}
 @keyframes sway{0%,100%{transform:rotate(1.4deg)}50%{transform:rotate(2.6deg) translateY(-4px)}}
 .hero-photo img{position:relative;z-index:1;display:block;width:100%;border-radius:26px;
+  aspect-ratio:4/3;object-fit:cover;object-position:center 55%;
   box-shadow:0 26px 60px rgba(0,0,0,.5)}
 .photo-chip{position:absolute;z-index:2;background:rgba(23,11,40,.78);backdrop-filter:blur(10px);
   border:1px solid var(--line);border-radius:18px;padding:11px 15px;
@@ -161,16 +158,6 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
 .on-light .lead{color:rgba(43,23,80,.75)}
 .lead{margin-top:16px;color:var(--muted);font-size:1.02rem;line-height:1.7}
 
-/* object layouts */
-.obj-row{display:flex;align-items:center;gap:18px;margin:22px 0 0 -22px}
-.obj-art{position:relative;flex:0 0 42%}
-.obj-art img{display:block;width:142%;max-width:none;height:auto;margin-left:-28%;
-  filter:drop-shadow(0 16px 30px rgba(0,0,0,.4))}
-.obj-col{flex:1;min-width:0}
-.obj-bg{position:absolute;top:-18px;right:-30%;width:108%;z-index:0;pointer-events:none}
-.obj-bg img{display:block;width:100%;max-width:none;height:auto;
-  -webkit-mask-image:linear-gradient(215deg,#000 0 32%,rgba(0,0,0,.4) 62%,transparent 86%);
-          mask-image:linear-gradient(215deg,#000 0 32%,rgba(0,0,0,.4) 62%,transparent 86%)}
 
 /* ═══════ why-method ═══════ */
 .vs-list{margin-top:22px;display:flex;flex-direction:column;gap:12px}
@@ -370,12 +357,12 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
   border-top:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:12px;z-index:100;
   transition:transform .4s cubic-bezier(.2,.8,.2,1);padding-bottom:calc(12px + env(safe-area-inset-bottom))}
 .sticky-bar.vis{transform:translateX(-50%) translateY(0)}
-.sticky-prices{flex:1}
+.sticky-prices{flex:0 0 auto}
 .sticky-old{font-size:.82rem;color:var(--muted2);text-decoration:line-through;line-height:1.2}
 .sticky-new{font-size:1.32rem;font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1.2}
-.sticky-btn{display:flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:14px;
-  color:#fff;background:linear-gradient(100deg,var(--rose),#a95fd8);font-weight:700;font-size:.96rem;
-  flex-shrink:0;white-space:nowrap;box-shadow:0 8px 22px rgba(240,112,159,.34)}
+.sticky-btn{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:12px 14px;border-radius:14px;color:#fff;background:linear-gradient(100deg,var(--rose),#a95fd8);
+  font-weight:700;font-size:.86rem;line-height:1.25;box-shadow:0 8px 22px rgba(240,112,159,.34)}
 
 @keyframes fY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 @keyframes fR{0%,100%{transform:rotate(0)}50%{transform:rotate(9deg)}}
@@ -402,7 +389,6 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
         <div class="pill"><span class="pill-dot"></span>Без додаткового обладнання</div>
         <div class="pill"><span class="pill-dot"></span>15–20 хвилин на день</div>
       </div>
-      <div class="hero-obj"><img src="/images/v2/obj/mat.webp" alt="" decoding="async" fetchpriority="low"></div>
     </div>
 
     <div class="hero-photo r d2">
@@ -444,12 +430,7 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
   <div class="container" style="position:relative;z-index:2">
     <h2 class="sec-title r d1">Чому спортзал, пігулки та медитації з ютубу <span class="hl">не відновлюють контакт з тілом?</span></h2>
 
-    <div class="obj-row r d2">
-      <div class="obj-art"><img src="/images/v2/obj/bowl.webp" alt="" loading="lazy" decoding="async"></div>
-      <div class="obj-col">
-        <p class="lead" style="margin-top:0">Медитації для сну, тренування, набори БАДів та пігулки — це те, що працює з симптомами, а не з причиною.</p>
-      </div>
-    </div>
+    <p class="lead r d2">Медитації для сну, тренування, набори БАДів та пігулки — це те, що працює з симптомами, а не з причиною.</p>
 
     <div class="vs-list">
       <div class="vs-card r d2">
@@ -472,7 +453,6 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
 
 <!-- ══════════ FOR WHO ══════════ -->
 <section class="section pad light-1" id="forwho">
-  <div class="obj-bg"><img src="/images/v2/obj/knot.webp" alt="" loading="lazy" decoding="async"></div>
   <div class="container" style="position:relative;z-index:2">
     <h2 class="sec-title on-light r d1">Впізнаєш себе <span class="hl">хоча б в одному з пунктів</span>?</h2>
     <div class="pain-list">
@@ -652,7 +632,16 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
       <div class="bonus-text">Простір, де можна говорити про тіло, бажання й відчуття без сорому. Нові знайомства, підтримка, обмін досвідом з жінками з усієї країни.</div>
       <div class="bonus-res">→ Відповіді на питання від авторки курсу особисто.</div>
     </div>
-    <div class="bonus-urgency r d4"><strong>Усі 3 бонуси доступні тільки до завершення таймера</strong><br>Далі курс продається без них за повну ціну 2 390 грн.</div>
+    <div class="bonus-urgency r d4">
+      <strong>Усі 3 бонуси доступні тільки до завершення таймера</strong><br>Далі курс продається без них за повну ціну 2 390 грн.
+      <div class="timer" style="margin-top:16px">
+        <div class="timer-unit"><div class="timer-num" id="h3">00</div><div class="timer-sub">год</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="m3">00</div><div class="timer-sub">хв</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="s3">00</div><div class="timer-sub">сек</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -828,7 +817,7 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
     <div class="sticky-old">2 390 грн</div>
     <div class="sticky-new">390 грн</div>
   </div>
-  <a href="#buy" class="sticky-btn">Купити зараз</a>
+  <a href="#buy" class="sticky-btn">Приєднатись до курсу за спеціальною ціною</a>
 </div>
 
 <script>
@@ -862,9 +851,9 @@ h1{font-size:clamp(2.05rem,8.6vw,2.75rem);font-weight:900;letter-spacing:-.03em;
 
 // timer
 (function(){
-  var key='wf_timer_end',end=+sessionStorage.getItem(key);
-  if(!end||Date.now()>end){end=Date.now()+(11*3600+47*60)*1000;sessionStorage.setItem(key,end)}
-  var ids=[['h1','m1','s1'],['h2','m2','s2']];
+  var key='wf_timer_1h',end=+sessionStorage.getItem(key);
+  if(!end||Date.now()>end){end=Date.now()+3600*1000;sessionStorage.setItem(key,end)}
+  var ids=[['h1','m1','s1'],['h2','m2','s2'],['h3','m3','s3']];
   function tick(){
     var d=Math.max(0,end-Date.now());
     var h=String(Math.floor(d/3600000)).padStart(2,'0');d%=3600000;
