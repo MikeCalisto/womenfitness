@@ -1,5 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/v2", "destination": "/kontakt-z-tilom", "permanent": true },
+    { "source": "/v2/", "destination": "/kontakt-z-tilom", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(avif|jpg|jpeg|png|webp|svg|ico)",
